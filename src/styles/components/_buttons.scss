@@ -1,0 +1,72 @@
+.btn-link {
+	display: inline-block;
+	background: #8b0000;
+	padding: .45rem 1rem;
+	border-radius: 4px;
+	color: #f8f8f8;
+	margin-right: 20px;
+	letter-spacing: 1px;
+}
+
+.btn-link:hover {
+	background: rgba(139, 0, 0, .9);
+}
+
+%projectsBtns {
+	background: transparent;
+	border-radius: 5px;
+	border: none;
+	border: 2px solid #8b0000;
+	color: #8b0000;
+	cursor: pointer;
+	padding: .4rem .9rem;
+	margin-right: 10px;
+	opacity: 0;
+	transition: all .3s;
+
+	&:hover {
+		background: #8b0000;
+		color: #fff;
+		transition: all .3s;
+	}
+}
+
+.source__btn {
+	@extend %projectsBtns;
+	// background: transparent;
+	// border-radius: 5px;
+	// border: none;
+	// border: 2px solid #8b0000;
+	// color: #8b0000;
+	// cursor: pointer;
+	// padding: .4rem .9rem;
+	// margin-right: 10px;
+	// opacity: 0;
+	// transition: all .3s;
+
+	// &:hover {
+	// 	background: #8b0000;
+	// 	color: #fff;
+	// 	transition: all .3s;
+	// }
+}
+
+.demo__btn {
+	@extend %projectsBtns;
+	// background: transparent;
+	// border-radius: 5px;
+	// border: none;
+	// border: 2px solid #8b0000;
+	// color: #8b0000;
+	// cursor: pointer;
+	// padding: .4rem .9rem;
+	// margin-right: 10px;
+	// opacity: 0;
+	// transition: all .3s;
+
+	// &:hover {
+	// 	background: #8b0000;
+	// 	color: #fff;
+	// 	transition: all .3s;
+	// }
+}

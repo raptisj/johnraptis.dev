@@ -1,0 +1,55 @@
+:root {
+	--css-color: #b70909;
+	--javascript-color: #5f9ea0;
+	--workflow-color: #b8860b;
+	--design-color: #f7ac22;
+}
+
+// breakpoints for mixin
+$mobile: 650px;
+
+// Body font
+$font-size: 1rem;
+$mainTitleColor: #333333;
+$customRed: #8b0000;
+$body-font-size: 1.15rem;
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$font-color: #404040;
+$light-font-color: rgba(0, 0, 0, 0.6);
+$font-family: -apple-system, BlinkMacSystemFont, 'Roboto', Helvetica Neue, Helvetica, Arial,
+  sans-serif;
+$line-height: 1.6;
+
+
+
+$border-width: 2px;
+$border-style: solid;
+$border-color: #ccc;
+$border-radius: 4px;
+$borders: $border-width $border-style $border-color;
+$box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.16);
+
+$code-color: $font-color;
+$code-size: 15px;
+$code-family: Nunito, monospace;
+$code-background: transparent;
+$code-borders: $borders;
+
+
+$code-font-family: monospace;
+$code-font-color: #b3b9c5;
+$string: #92d192;
+$variable: #f2777a;
+$property: #abb2bf;
+$number: #fca369;
+$operator: #ac8d58;
+$punctuation: #d5d8df;
+$comment: #777c85;
+$function: #62cfcf;
+$keyword: #ffeead;
+$attribute: #ffd479;
+$class: #e1a6f2;
+$tag: #6ab0f3;
+$error: #f2777a;

@@ -1,11 +1,13 @@
+const config = require('./data/siteConfig')
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
+    title: `John Raptis`,
+    author: `John Raptis`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `JohnRaptisM`,
     },
   },
   plugins: [
@@ -21,6 +23,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `pages`,
       },
     },
     {
@@ -50,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+         trackingId: config.googleAnalyticsID,
       },
     },
     `gatsby-plugin-feed`,
@@ -63,9 +72,10 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/favicon.png`,
       },
     },
+    'gatsby-plugin-sass',
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
