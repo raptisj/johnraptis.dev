@@ -21,7 +21,7 @@ by the concept of 'public learning' and having a space of your own. My personal 
 
 ##As for now
 
-* **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=Xdv1omQBjHk" target="_blank">Snarky Puppy - GO</a>
+* **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=O8cgxZsAkvw" target="_blank">Fkj - Moments</a>
 * **Currently reading:** The autobiography of Malcom X
 * **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=F9Zv6MGdh7Y" target="_blank">Why your MUSIC sounds 12 Shades of Grey
 </a>

@@ -7,7 +7,7 @@ template: post
 
 Today we are going to build a simple scroll indicator using CSS and Javascript. For you who don't know, a scroll indicator in the horizontal line on top of our page that fills based on where we are vertically on the page. Each page has different height so evidently we have some math to do. (not really).
 
-###Prerequisites:
+##Prerequisites:
 
 - Basic knowledge of HTML, CSS and Javascript.
 
@@ -86,17 +86,17 @@ section p {
 
 Some terms to understand before we go ahead with this. 
 
-####scrollY
+###scrollY
 
 > Property of the window interface. Returns the number in pixels that the document is currently scrolled vertically. 
 For IE support better use pageYOffset. But come on. Do you want to be that person?
 
-####scrollHeight
+###scrollHeight
 
 > Measures the height of an element including what is not visible on the screen due to overflow.
 
 
-####clientHeight
+###clientHeight
 
 > Measures the inner height of an element in pixels. Includes padding if present.
 

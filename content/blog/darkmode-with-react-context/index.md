@@ -8,7 +8,7 @@ template: post
 Darkmode is a small little feature that is pretty common these days. Now I'm not writing this article on why it's cool but I think this is a nice opportunity to learn some concepts that come with this. And it's actually the first example that I came across and made me understand how the react context api works. First will do this using Class components and then we will move to functional ones using Hooks.
 This article was inspired by reading the docs(really?) 
 
-####Prerequisites:
+##Prerequisites:
 
 - Have Node.js and npm installed globally
 
@@ -18,7 +18,7 @@ Source code and demo down below
 - [view source](https://github.com/john2220/darkmode-app) (example with class components is in a different branch named classComponents)
 - [view demo](https://vigilant-chandrasekhar-88baca.netlify.com/)
 
-###What is the context api?(Quickly)
+##What is the context api?(Quickly)
 
 The Context API is a way to control/handle the state of our application. A central place for all of our data.
 Now you will say that 'isn't Redux for that? And yes Redux does all of that.
@@ -26,7 +26,7 @@ You would prefer to use Context API though over something like Redux if you are 
 
 Lets create our darkmode-app and learn as we go.
 
-###With Classes
+##With Classes
 
 First create you React app with the usual commands.
 ```
@@ -262,15 +262,15 @@ class MainBody extends Component {
 export default MainBody;
 ```
 
-###With Hooks
+##With Hooks
 Now let's rewrite this using Hooks. I personally prefer this way since it's easier to reason about and cleaner for the eye.
 Hooks provide us with special functions. There are many but we will use two.
 
 
-> ####useState()
+> ###useState()
  will allow us to use state in functional components.
 
-> ####useContext() 
+> ###useContext() 
 will allow us to consume context in functional component.
 
 Our Navbar.js component will change like this.

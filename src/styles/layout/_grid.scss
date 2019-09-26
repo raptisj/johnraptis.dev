@@ -209,3 +209,17 @@
 		}
 	}
 }
+
+.post {
+	h2 {
+		margin-top: 80px;
+
+		@include breakpoint(mobile) {
+			margin-top: 70px;
+		}
+	}
+
+	section {
+		padding-bottom: 50px;
+	}
+}
