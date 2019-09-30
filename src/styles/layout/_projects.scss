@@ -1,0 +1,66 @@
+
+.project {
+	border-bottom: 2px solid #ddd;
+	padding: 0 0 10px 0;
+	margin-bottom: 30px;
+	transition: all .3s;
+	position: relative;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		h3 {	
+			display: block;
+			color: #8b0000;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin: 0;
+			padding: 1rem 0;
+		}
+	}
+
+	p {
+		margin: 10px 0 0 0;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.wave {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: red;
+		opacity: 0;
+		width: 60%;
+		height: 0;
+		clip-path: polygon(86% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0 100%, 34% 100%, 55% 100%, 74% 100%);
+		transition: all .4s;
+	}
+}
+
+
+.project:hover {
+	border-bottom: 2px solid #8b000020;
+	transition: all .3s;
+
+	.source__btn, .demo__btn {
+		opacity: 1;
+		transition: all .3s;
+	}
+
+	.wave {
+		content: '';
+		position: absolute;
+		display: block;
+		bottom: 0px;
+		right: -1px;
+		width: 60%;
+		height: 70px;
+		background: #8b0000;
+		opacity: .2;
+		transition: all .4s;
+		clip-path: polygon(92% 0, 100% 0, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 34% 84%, 55% 68%, 70% 36%);
+	}
+}

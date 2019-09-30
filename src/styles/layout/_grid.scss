@@ -30,6 +30,32 @@
 	clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
 }
 
+
+.ball {
+	position: fixed;
+	top: 75px;
+	right: 4%;
+	width: 170px;
+	height: 170px;
+	background: #f2f2f2;
+	border-radius: 50%;
+	z-index: 1;
+	animation: ball 10s infinite;
+	transform: translateX(0);
+}
+
+@keyframes ball {
+	0% {
+		transform: translateX(0);
+	} 
+	50% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
 .main-title {
 	margin: 0;
 	padding: 40px 0 20px 0;
@@ -53,53 +79,7 @@
 	}
 }
 
-.post__link {
-	border-top: 2px solid #f0f0f0;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 12px;
-
-	@include breakpoint(mobile) {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-}
-
-.post__link:hover,
-.post__link:active,
-.post__link:focus {
-	transition: .3s;
-	background: #f2f2f2;
-	box-shadow: 2px 4px 9px #999999;
-}
-
-.post__link span {
-	color: #727272;
-	white-space: nowrap;
-	font-size: .9rem;
-	padding: 1rem 0 0 10px;
-
-	@include breakpoint(mobile) {
-		// padding: 0;
-		// font-size: .8rem;
-		// justify-self: end;
-		display: none;
-	}
-}
-
-.post__title {
-	display: block;
-	color: #8b0000;
-	font-size: 1.4rem;
-	font-weight: 400;
-	margin: 0;
-	padding: 1rem 0;
-
-	@include breakpoint(mobile) {
-		font-size: 1.2rem;
-	}
-}
-
+// footer
 .footer {
 	text-align: center;
 	padding: 1rem;
@@ -111,115 +91,166 @@
 	color: #727272;
 }
 
-.posts__grid {
-	padding-top: 100px;
-	@include breakpoint(mobile) {
-		padding-top: 60px;
-	}
-}
+// .post__link {
+// 	border-top: 2px solid #f0f0f0;
+// 	display: flex;
+// 	justify-content: space-between;
+// 	padding: 0 12px;
 
-.section {
-	padding-bottom: 50px;
+// 	@include breakpoint(mobile) {
+// 		display: grid;
+// 		grid-template-columns: 1fr;
+// 	}
+// }
 
-	h2 {
-		font-size: 2rem;
-	}
+// .post__link:hover,
+// .post__link:active,
+// .post__link:focus {
+// 	transition: .3s;
+// 	background: #f2f2f2;
+// 	box-shadow: 2px 4px 9px #999999;
+// }
 
-	@include breakpoint(mobile) {
-		padding-bottom: 10px;
-	}
-}
+// .post__link span {
+// 	color: #727272;
+// 	white-space: nowrap;
+// 	font-size: .9rem;
+// 	padding: 1rem 0 0 10px;
 
-.project {
-	border-bottom: 2px solid #ddd;
-	padding: 0 0 10px 0;
-	margin-bottom: 30px;
-	transition: all .3s;
-	position: relative;
+// 	@include breakpoint(mobile) {
+// 		// padding: 0;
+// 		// font-size: .8rem;
+// 		// justify-self: end;
+// 		display: none;
+// 	}
+// }
 
-	&__title {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+// .post__title {
+// 	display: block;
+// 	color: #8b0000;
+// 	font-size: 1.2rem;
+// 	font-weight: 400;
+// 	margin: 0;
+// 	padding: 1rem 0;
 
-		h3 {	
-			display: block;
-			color: #8b0000;
-			font-size: 1.4rem;
-			font-weight: 600;
-			margin: 0;
-			padding: 1rem 0;
-		}
-	}
-
-	p {
-		margin: 10px 0 0 0;
-		font-weight: 600;
-		font-size: 1rem;
-	}
-
-	.wave {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		background: red;
-		opacity: 0;
-		width: 60%;
-		height: 0;
-		clip-path: polygon(86% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0 100%, 34% 100%, 55% 100%, 74% 100%);
-		transition: all .4s;
-	}
-}
+// 	@include breakpoint(mobile) {
+// 		font-size: 1.2rem;
+// 	}
+// }
 
 
-.project:hover {
-	border-bottom: 2px solid #8b000020;
-	transition: all .3s;
 
-	.source__btn, .demo__btn {
-		opacity: 1;
-		transition: all .3s;
-	}
+// .posts__grid {
+// 	padding-top: 100px;
+// 	@include breakpoint(mobile) {
+// 		padding-top: 60px;
+// 	}
+// }
 
-	.wave {
-		content: '';
-		position: absolute;
-		display: block;
-		bottom: 0px;
-		right: -1px;
-		width: 60%;
-		height: 70px;
-		background: #8b0000;
-		opacity: .2;
-		transition: all .4s;
-		clip-path: polygon(92% 0, 100% 0, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 34% 84%, 55% 68%, 70% 36%);
-	}
-}
+// .section {
+// 	padding-bottom: 50px;
 
-.post-title {
-	padding-bottom: 50px;
-	h1 {
-		margin: 0;
-		padding: 40px 0 0 0;
-		font-size: 2.6rem;
-		color: #333333;
+// 	h2 {
+// 		font-size: 2rem;
+// 	}
 
-		@include breakpoint(mobile) {
-			font-size: 2rem;
-		}
-	}
-}
+// 	@include breakpoint(mobile) {
+// 		padding-bottom: 10px;
+// 	}
+// }
 
-.post {
-	h2 {
-		margin-top: 80px;
 
-		@include breakpoint(mobile) {
-			margin-top: 70px;
-		}
-	}
 
-	section {
-		padding-bottom: 50px;
-	}
-}
+// .project {
+// 	border-bottom: 2px solid #ddd;
+// 	padding: 0 0 10px 0;
+// 	margin-bottom: 30px;
+// 	transition: all .3s;
+// 	position: relative;
+
+// 	&__title {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: space-between;
+
+// 		h3 {	
+// 			display: block;
+// 			color: #8b0000;
+// 			font-size: 1.4rem;
+// 			font-weight: 600;
+// 			margin: 0;
+// 			padding: 1rem 0;
+// 		}
+// 	}
+
+// 	p {
+// 		margin: 10px 0 0 0;
+// 		font-weight: 600;
+// 		font-size: 1rem;
+// 	}
+
+// 	.wave {
+// 		position: absolute;
+// 		bottom: 0;
+// 		right: 0;
+// 		background: red;
+// 		opacity: 0;
+// 		width: 60%;
+// 		height: 0;
+// 		clip-path: polygon(86% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0 100%, 34% 100%, 55% 100%, 74% 100%);
+// 		transition: all .4s;
+// 	}
+// }
+
+
+// .project:hover {
+// 	border-bottom: 2px solid #8b000020;
+// 	transition: all .3s;
+
+// 	.source__btn, .demo__btn {
+// 		opacity: 1;
+// 		transition: all .3s;
+// 	}
+
+// 	.wave {
+// 		content: '';
+// 		position: absolute;
+// 		display: block;
+// 		bottom: 0px;
+// 		right: -1px;
+// 		width: 60%;
+// 		height: 70px;
+// 		background: #8b0000;
+// 		opacity: .2;
+// 		transition: all .4s;
+// 		clip-path: polygon(92% 0, 100% 0, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 34% 84%, 55% 68%, 70% 36%);
+// 	}
+// }
+
+// .post-title {
+// 	padding-bottom: 50px;
+// 	h1 {
+// 		margin: 0;
+// 		padding: 40px 0 0 0;
+// 		font-size: 2.4rem;
+// 		color: #333333;
+
+// 		@include breakpoint(mobile) {
+// 			font-size: 1.9rem;
+// 		}
+// 	}
+// }
+
+// .post {
+// 	h2 {
+// 		margin-top: 80px;
+
+// 		@include breakpoint(mobile) {
+// 			margin-top: 70px;
+// 		}
+// 	}
+
+// 	section {
+// 		padding-bottom: 50px;
+// 	}
+// }

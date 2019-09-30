@@ -1,0 +1,50 @@
+.post__link {
+	border-top: 2px solid #f0f0f0;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 12px;
+
+	@include breakpoint(mobile) {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+.post__link:hover,
+.post__link:active,
+.post__link:focus {
+	transition: .3s;
+	background: #f2f2f2;
+	box-shadow: 2px 4px 9px #999999;
+}
+
+.post__link span {
+	color: #727272;
+	white-space: nowrap;
+	font-size: .9rem;
+	padding: 1rem 0 0 10px;
+
+	@include breakpoint(mobile) {
+		display: none;
+	}
+}
+
+.post__title {
+	display: block;
+	color: #8b0000;
+	font-size: 1.2rem;
+	font-weight: 400;
+	margin: 0;
+	padding: 1rem 0;
+
+	@include breakpoint(mobile) {
+		font-size: 1.2rem;
+	}
+}
+
+.posts__grid {
+	padding-top: 100px;
+	@include breakpoint(mobile) {
+		padding-top: 60px;
+	}
+}

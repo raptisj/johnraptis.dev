@@ -16,7 +16,7 @@ Paraphrasing Wikipedia's definition:
 
 > A higher-order function is a function that either takes a function as an argument or returns a function as a result.
 
-In the following examples, all they do is return a new array based on the arguments we provided.
+Now let's see some examples.
 
 ##map()
 
@@ -74,9 +74,9 @@ The above will return.
 
 So what is basically happening here?
 
-1st iteration the <span class="highlight-in-text">curr</span> is 1 and the <span class="highlight-in-text">acc</span> 1
-2nd iteration the <span class="highlight-in-text">curr</span> is 2 and the <span class="highlight-in-text">acc</span> 3 (1 + 2)
-3rd iterations the <span class="highlight-in-text">curr</span> is 3 and the <span class="highlight-in-text">acc</span> is 6 (1 + 2 + 3)
+- 1st iteration the <span class="highlight-in-text">curr</span> is 1 and the <span class="highlight-in-text">acc</span> 1
+- 2nd iteration the <span class="highlight-in-text">curr</span> is 2 and the <span class="highlight-in-text">acc</span> 3 (1 + 2)
+- 3rd iterations the <span class="highlight-in-text">curr</span> is 3 and the <span class="highlight-in-text">acc</span> is 6 (1 + 2 + 3)
 and so on ...
 
 ##Combining array methods

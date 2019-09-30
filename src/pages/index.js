@@ -8,7 +8,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="John Raptis" />
-      <section className="section">
+      <section>
           <h1 className="main-title">Hi people</h1>
           <p>I'm John. I'm a web developer from Greece.</p>
           <p>I like writing and explaning the things I think I know and things that I try to learn as well. 
