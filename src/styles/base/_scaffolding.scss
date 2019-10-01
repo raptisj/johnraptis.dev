@@ -56,6 +56,12 @@ blockquote {
 	border-radius: 3px;
 }
 
+mark {
+	background: #f5f5dc;
+	padding: 4px;
+	border-radius: 3px;	
+}
+
 
 .code-title {
 	padding: 0;
@@ -78,7 +84,6 @@ blockquote {
 	font-size: 1.5rem;
 }
 
-
 .articles-head {
 	padding-bottom: 40px;
 
@@ -87,4 +92,8 @@ blockquote {
 	}
 }
 
-
+.favourite-links {
+	&:hover {
+		border-bottom: 2px solid #8b0000;
+	}
+}

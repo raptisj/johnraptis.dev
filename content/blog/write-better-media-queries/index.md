@@ -1,5 +1,5 @@
 ---
-title: Write better media queries with SCSS/SASS
+title: Write better media queries with SASS/SCSS
 date: 2019-09-10
 description: Leverage the pover of mixins 
 template: post
@@ -9,14 +9,14 @@ To be honest I used to not understand containers and breakpoints. I know it seem
 
 ##Prerequisites:
 
-- Know the basics of sass/scss
+- Know the basics of sass/scss.
 
-- Have a sass/scss workflow rolling
+- Have a sass/scss workflow rolling.
 
 ##Using @mixins
 
 When I first learned about media queries I did what everyone was doing. I would have a stylesheet with all my styles and at the bottom of the page, set my media queries. But there is a catch. If you are dealing with a bigger project things can get messy, since you don't have a clear idea where you css is coming from and what overrides what. And often times is something like one property. Lots of needless scrolling.
-We can approach our media queries in another fashion,by using scss @mixin's.
+We can approach our media queries in another fashion, by using scss <span class="highlight-in-text">@mixin</span>'s.
 
 First we are going to set our breakpoints.
 
@@ -26,7 +26,7 @@ $md: 900px;    // 900px and up
 $sm: 600px;    // 600px and up
 ```
 
-Then we are going to store the media query functionality in a @mixin. 
+Then we are going to store the media query functionality in a <span class="highlight-in-text">@mixin</span>. 
 
 ```scss
 @mixin small_breakpoint {
@@ -42,7 +42,7 @@ Then we are going to store the media query functionality in a @mixin.
 }
 ```
 
-After setting a @mixin with a descriptive name we pass the breakpoint variable as our min-width. @content is where our classes will live.
+After setting a <span class="highlight-in-text">@mixin</span> with a descriptive name we pass the breakpoint variable as our min-width. <span class="highlight-in-text">@content</span> is where our classes will live.
 
 In our scss file we will have something like this.
 
@@ -57,7 +57,7 @@ In our scss file we will have something like this.
 }
 ```
 
-Since we are thinking mobile first, our className starts with font-size 16px. (0px till the value of our $sm variable). The small_breakpoint takes place from our $sm value(600px) till the $md value.
+Since we are thinking mobile first, our className starts with <span class="highlight-in-text">font-size 16px</span>. (0px till the value of our <span class="highlight-in-text">$sm</span> variable). The <span class="highlight-in-text">small_breakpoint</span> takes place from our <span class="highlight-in-text">$sm</span> value(600px) till the $md value.
 
 I think this is a much better way to organize our scss.
 

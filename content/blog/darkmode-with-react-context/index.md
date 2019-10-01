@@ -5,12 +5,12 @@ description: It's all over the internet.. so why not
 template: post
 ---
 
-Darkmode is a small little feature that is pretty common these days. Now I'm not writing this article on why it's cool but I think this is a nice opportunity to learn some concepts that come with this. And it's actually the first example that I came across and made me understand how the react context api works. First will do this using Class components and then we will move to functional ones using Hooks.
+Darkmode is a small little feature that is pretty common these days. Now I'm not writing this article on why it's cool but I think this is a nice opportunity to learn some concepts that come with this. And it's actually the first example that I came across and made me understand how the React Context API works. First we will do this using Class components and then we will move to functional ones using Hooks.
 This article was inspired by reading the docs(really?) 
 
 ##Prerequisites:
 
-- Have Node.js and npm installed globally
+- Have Node.js and npm installed globally.
 
 - Know the basics of React.
 
@@ -18,17 +18,17 @@ Source code and demo down below
 - [view source](https://github.com/john2220/darkmode-app) (example with class components is in a different branch named classComponents)
 - [view demo](https://vigilant-chandrasekhar-88baca.netlify.com/)
 
-##What is the context api?(Quickly)
+##What is the Context API?(Quickly)
 
 The Context API is a way to control/handle the state of our application. A central place for all of our data.
-Now you will say that 'isn't Redux for that? And yes Redux does all of that.
+Now you will say that '*isn't Redux for that*'? And yes Redux does all of that.
 You would prefer to use Context API though over something like Redux if you are dealing with a smaller application, where Redux might be a bit of an overkill.
 
 Lets create our darkmode-app and learn as we go.
 
 ##With Classes
 
-First create you React app with the usual commands.
+First create you React app with the usual command.
 ```
 npx create-react-app darkmode-app
 ```
@@ -50,7 +50,7 @@ Three components in a components folder and one in a contexts folder. The later 
 
 Some css for basic styling. I use scss so go ahead and <span class="highlight-in-text">npm install node-sass</span> as well. Don't forget to change the extension in index.js from .css to .scss.
 
-Our Navbar component ...
+Our  <span class="highlight-in-text">Navbar</span> component ...
 ```javascript
 import React, { Component } from 'react';
 import ToggleTheme from './ToggleTheme';
@@ -70,7 +70,7 @@ class Navbar extends Component {
 export default Navbar;
 ```
 
-... and our MainBody component.
+... and our  <span class="highlight-in-text">MainBody</span> component.
 ```javascript
 import React, { Component } from 'react';
 
@@ -92,7 +92,7 @@ class MainBody extends Component {
 export default MainBody;
 ```
 
-Now you might have guessed it. Our state that will control in what mode we are(darkmode / lightmode) must be global and accessible from everywhere. So our changing color theme logic will live in the ThemeContext.js file.
+Now you might have guessed it. Our state that will control in what mode we are(darkmode / lightmode) must be global and accessible from everywhere. So our changing color theme logic will live in the  <span class="highlight-in-text">ThemeContext.js</span> file.
 
 ```javascript
 import React, { Component, createContext } from 'react';
@@ -123,13 +123,13 @@ export default ThemeContextProvider;
 
 Above we imported <span class="highlight-in-text">React</span> and <span class="highlight-in-text">createContext</span>. <span class="highlight-in-text">createContext</span> creates a Context object. We store that in a const named ThemeContext.
 
-We create a component named ThemeContextProvider. This component's state will contain our global data. In this case if <span class="highlight-in-text">lightTheme</span> is true or false.
+We create a component named  <span class="highlight-in-text">ThemeContextProvider</span>. This component's state will contain our global data. In this case if <span class="highlight-in-text">lightTheme</span> is true or false.
 
 To provide our components with the necessary data we have the Provider tag that surrounds the components that we want to pass the data to.
 
 In our render function above we are returning our ThemeContext object we created and give it the Provider tag. We pass a value property that accepts the data we want to pass. In this case we pass an object with our state and functions(in our case <span class="highlight-in-text">toggleTheme</span> function toggles our state). 
 
-Inside we destructure the children prop that refers to our child components. The ones we are nesting in our App.js file.
+Inside we destructure the children prop that refers to our child components. The ones we are nesting in our  <span class="highlight-in-text">App.js</span> file.
 
 Looks like this.
 ```javascript
@@ -153,7 +153,7 @@ export default App;
 ```
 We provided our data all over our application using Provider with the ThemeContext object. Now we have to catch the data from each of our components. We do this using the Consumer tag.
 
-In our ToggleTheme component we import the ThemeContext object.(NOT the ThemeContextProvider component) and wrap our JSX inside the render function with the ThemeContext.Consumer tag. 
+In our  <span class="highlight-in-text">ToggleTheme</span> component we import the  <span class="highlight-in-text">ThemeContext</span> object.(NOT the <span class="highlight-in-text">ThemeContextProvider</span> component) and wrap our JSX inside the render function with the ThemeContext.Consumer tag. 
 
 ```javascript
 import React, { Component } from 'react';
@@ -198,15 +198,15 @@ class ToggleTheme extends Component {
 
 export default ToggleTheme;
 ```
-Our Consumer expects a function. We pass our context and return our JSX
+Our  <span class="highlight-in-text">Consumer</span> expects a function. We pass our context and return our JSX
 Note that with onClick we fire the toggleTheme function.
 
 We also have some local state to show the proper icon based on the state of our theme.
 With onChange we call the <span class="highlight-in-text">iconChange</span> function that controls which icon should be shown. 
 
-In Navbar.js we will change the background color on darktheme. We are going to apply a className based on our <span class="highlight-in-text">lightTheme</span>'s state.
+In  <span class="highlight-in-text">Navbar.js</span> we will change the background color on darktheme. We are going to apply a className based on our <span class="highlight-in-text">lightTheme</span>'s state.
 
-Again we import ThemeContext and apply it with the Consumer.
+Again we import ThemeContext and apply it with the  <span class="highlight-in-text">Consumer</span>.
 
 ```javascript
 import React, { Component } from 'react';
@@ -234,7 +234,7 @@ export default Navbar;
 ```
 
 We store a conditional statement in a const named <span class="highlight-in-text">theme</span> and pass it as a className.
-The same applies for our MainBody component.
+The same applies for our  <span class="highlight-in-text">MainBody</span> component.
 ```javascript
 import React, { Component } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
@@ -273,7 +273,7 @@ Hooks provide us with special functions. There are many but we will use two.
 > ###useContext() 
 will allow us to consume context in functional component.
 
-Our Navbar.js component will change like this.
+Our  <span class="highlight-in-text">Navbar.js</span> component will change like this.
 ```javascript
 import React, { Component, useContext } from 'react';
 import ToggleTheme from './ToggleTheme';
@@ -293,10 +293,10 @@ const Navbar = () => {
 export default Navbar;
 ```
 
-We import the <span class="highlight-in-text">useContext</span> function on top and instead of wrapping our content in a Consumer we destructure the state. (In our case the lightTheme). 
+We import the <span class="highlight-in-text">useContext</span> function on top and instead of wrapping our content in a  <span class="highlight-in-text">Consumer</span> we destructure the state. (In our case the lightTheme). 
 And that's it.
 
-The same will apply for MainBody.js.
+The same will apply for  <span class="highlight-in-text">MainBody.js</span>.
 
 ```javascript
 import React, { Component, useContext } from 'react';
@@ -320,9 +320,9 @@ const MainBody = () => {
 export default MainBody;
 ```
 
-Going forward in our ToggleTheme component we import <span class="highlight-in-text">useContext</span> and <span class="highlight-in-text">useState</span> as well.
+Going forward in our <span class="highlight-in-text">ToggleTheme</span> component we import <span class="highlight-in-text">useContext</span> and <span class="highlight-in-text">useState</span> as well.
 With <span class="highlight-in-text">useContext</span> we grab the toggleTheme function and with <span class="highlight-in-text">useState</span> we set the state of our icon.
-icon is the default and with setIcon we pass the new value.(takes place in the iconChange function).
+icon is the default and with  <span class="highlight-in-text">setIcon</span> we pass the new value.(takes place in the iconChange function).
 
 ```javascript
 import React, { Component, useState, useContext } from 'react';
@@ -359,9 +359,9 @@ const ToggleTheme = () => {
 
 export default ToggleTheme;
 ```
-Note in our returned JSX we don't use the this keyword.
+Note in our returned JSX we don't use the  <span class="highlight-in-text">this</span> keyword.
 
-Lastly in our ThemeContext.
+Lastly in our  <span class="highlight-in-text">ThemeContext</span>.
 ```javascript
 import React, { Component, createContext, useState } from 'react';
 
@@ -384,7 +384,7 @@ const ThemeContextProvider = (props) => {
 export default ThemeContextProvider;
 ```
 
-Again we set and change the state with <span class="highlight-in-text">useState</span>. And again note that we don't use the this keyword.
+Again we set and change the state with <span class="highlight-in-text">useState</span>. And again note that we don't use the  <span class="highlight-in-text">this</span> keyword.
 
 That was it. Now you have the basic logic down. So get to work and try things of your own. That is the best way to learn. 
 
