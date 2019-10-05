@@ -5,7 +5,7 @@ template: page
 ---
 
 I'm John and I'm a web developer from Greece. Besides documenting what I learn, I was intriged 
-by the concept of 'public learning' and having a space of your own. My personal playground I guess.
+by the concept of [public learning](https://www.swyx.io/writing/learn-in-public/) and having a space of your own. My personal playground I guess.
 
 
 ##My Life in bullets

@@ -30,7 +30,6 @@
 	clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
 }
 
-
 .ball {
 	position: fixed;
 	top: 75px;
@@ -75,6 +74,11 @@
 
 		@include breakpoint(mobile) {
 			margin-top: 40px;
+		}
+	}
+	a {
+		&:hover {
+			border-bottom: 2px solid #8b0000;
 		}
 	}
 }

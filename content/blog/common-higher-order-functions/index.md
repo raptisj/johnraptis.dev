@@ -1,5 +1,5 @@
 ---
-title: Common Higher Order Array Methods(Part 1)
+title: Common Higher Order Array Methods
 date: 2019-09-23
 description: Using map, filter and reduce
 template: post

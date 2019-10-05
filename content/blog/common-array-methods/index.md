@@ -1,5 +1,5 @@
 ---
-title: Common Higher Order Array Methods(Part 2)
+title: Common Array Methods
 date: 2019-09-26
 description: Using push, pop, find and more
 template: post
