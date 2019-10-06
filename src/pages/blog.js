@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from "../components/layout"
 
+import Helmet from 'react-helmet'
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 
@@ -9,8 +10,9 @@ const Blog = ({data}) => {
 
 	return (
 		<Layout>
+     <Helmet title={`Articles - John Raptis`} />
+			<SEO  />
 			<h1 className="main-title">Articles</h1>
-			<SEO title="Blog" />
       <section className="posts__grid"> 
 	        {posts.map(({ node }) => {
 	          return (

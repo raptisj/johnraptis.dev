@@ -1,12 +1,14 @@
 import React from 'react'
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Helmet from 'react-helmet'
 import SEO from "../components/seo"
 
 const Page = ({data}) => {
 	const content = data.markdownRemark
 	return (
 		<Layout>
+     <Helmet title={`${content.frontmatter.title} - John Raptis`} />
 		    <SEO
           		title={content.frontmatter.title}
           		description={content.frontmatter.description || content.excerpt}

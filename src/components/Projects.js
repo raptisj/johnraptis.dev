@@ -15,7 +15,7 @@ const Projects = ({projects}) => {
 				<div className="project__title">
 					<h3>{project.title}</h3>
 					<div>
-						<a href={project.demo} className="demo__btn">Demo</a>
+						{(project.demo) ? (<a href={project.demo} className="demo__btn">Demo</a>) : (<div></div>)}
 						<a href={project.source} className="source__btn">Source</a>
 					</div>
 				</div>

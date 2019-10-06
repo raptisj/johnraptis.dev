@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: `John Raptis`,
     author: `John Raptis`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `John Raptis is a web developer from Greece.`,
+    siteUrl: `https://johnraptis.dev/`,
     social: {
       twitter: `JohnRaptisM`,
     },
@@ -66,11 +66,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `John Raptis`,
+        short_name: `John Raptis`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#8b0000`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },
