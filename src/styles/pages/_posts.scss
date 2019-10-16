@@ -32,13 +32,13 @@
 .post__title {
 	display: block;
 	color: #8b0000;
-	font-size: 1.2rem;
-	font-weight: 400;
+	font-size: 1.1rem;
+	font-weight: 600;
 	margin: 0;
 	padding: 1rem 0;
 
 	@include breakpoint(mobile) {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 }
 
