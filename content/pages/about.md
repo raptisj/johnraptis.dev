@@ -19,6 +19,7 @@ by the concept of [public learning](https://www.swyx.io/writing/learn-in-public/
 - **2013** Came back to Greece. Moved to Thessaloniki, where I took odd jobs to sustain myself. I stopped playing music completely.
 - **2016**(_October_) Started coding after watching a random tutorial(don't ask how).
 - **2018**(_May_) Got my first job as web developer.
+- **2019**(_November_) Started working at [Loceye](https://www.loceye.io/) as a Javascript developer.
 
 ##As for now
 
