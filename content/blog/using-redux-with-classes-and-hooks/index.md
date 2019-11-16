@@ -728,33 +728,25 @@ export default function(state = initialState, action) {
       }
     case EDIT_SONG:
       return {
-        songs: state.songs.filter((song, i) => {
-          if (i === action.payload) {
-            song.editing = true
-          } else {
-            song.editing = false
-          }
-          return song
-        }),
+        songs: state.songs.map((song, i) =>
+          i === action.payload
+            ? { ...song, editing: true }
+            : { ...song, editing: false }
+        ),
       }
     case UPDATE_SONG:
       return {
-        songs: state.songs.filter((song, i) => {
-          if (i === action.index) {
-            song.title = action.title
-            song.editing = false
-          }
-          return song
-        }),
+        songs: state.songs.map((song, i) =>
+          i === action.index
+            ? { ...song, title: action.title, editing: false }
+            : song
+        ),
       }
     case CANCEL_EDIT:
       return {
-        songs: state.songs.map((song, i) => {
-          if (i === action.index) {
-            song.editing = false
-          }
-          return song
-        }),
+        songs: state.songs.map((song, i) =>
+          i === action.index ? { ...song, editing: false } : song
+        ),
       }
     default:
       return state
