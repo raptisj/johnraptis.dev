@@ -30,6 +30,12 @@ Let's start
 
 First some brief explanation and then we will jump to the code.
 
+To install RTK run
+
+```
+npm install --save @reduxjs/toolkit
+```
+
 ##configureStore
 
 In a typical Redux app we set our store with <span class="highlight-in-text">createStore</span>. That's fine but most times you are copy pasting code which is prone to bugs.<span class="highlight-in-text"> configureStore </span> takes care of that. It also combines our slice reducers and any kind of middleware we might have.
