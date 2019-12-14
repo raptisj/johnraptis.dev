@@ -1,7 +1,7 @@
 ---
 title: Up and running with Redux Toolkit
 date: 2019-12-14
-description: The better way to write Redux logic
+description: A better way to write Redux logic
 template: post
 ---
 
