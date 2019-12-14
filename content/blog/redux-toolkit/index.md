@@ -100,11 +100,9 @@ With createReducer
 
 ```jsx
 export default createReducer(initialState, {
-    [addSong]: (state, action) => {
-        return {
-            songs: [action.payload, ...state.songs]
-        };
-    },
+	[addSong]: (state, action) => {
+		state.push(action.payload)
+	},
 }
 ```
 
@@ -157,50 +155,36 @@ Now lets rewrite our reducer.
 We import our <span class="highlight-in-text">createReducer</span>. We pass it our initial state and a object with all of our actions like so. No switch statements. Just the name of our action will do.
 
 ```jsx
-const initialState = {
-	songs: [
-		{ title: "I love redux", editing: false },
-		{ title: "The redux song", editing: false },
-		{ title: "Run to the redux hill", editing: false },
-	],
-}
+const initialState = [
+	{ title: "I love redux", editing: false },
+	{ title: "The redux song", editing: false },
+	{ title: "Run to the redux hill", editing: false },
+]
 
 // Reducer
 export default createReducer(initialState, {
 	[addSong]: (state, action) => {
-		return {
-			songs: [action.payload, ...state.songs],
-		}
+		state.push(action.payload)
 	},
 	[removeSong]: (state, action) => {
-		return {
-			songs: state.songs.filter((s, i) => i !== action.payload),
-		}
+		state.splice(action.payload, 1)
 	},
-	[editSong]: (state, action) => {
-		return {
-			songs: state.songs.map((song, i) =>
-				i === action.payload
-					? { ...song, editing: true }
-					: { ...song, editing: false }
-			),
-		}
-	},
-	[updateSong]: (state, action) => {
-		const { index, title } = action.payload
-		return {
-			songs: state.songs.map((song, i) =>
-				i === index ? { ...song, title, editing: false } : song
-			),
-		}
-	},
-	[cancelEdit]: (state, action) => {
-		return {
-			songs: state.songs.map((song, i) =>
-				i === action.payload ? { ...song, editing: false } : song
-			),
-		}
-	},
+	[editSong]: (state, action) =>
+		state.map((song, i) =>
+			i === action.payload
+				? { ...song, editing: true }
+				: { ...song, editing: false }
+		),
+	[updateSong]: (state, action) =>
+		state.map((song, i) =>
+			i === action.payload.index
+				? { ...song, title: action.payload.title, editing: false }
+				: song
+		),
+	[cancelEdit]: (state, action) =>
+		state.map((song, i) =>
+			i === action.payload ? { ...song, editing: false } : song
+		),
 })
 ```
 
@@ -221,32 +205,26 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const songSlice = createSlice({
 	name: "songs",
-	initialState: {
-		songs: [
-			{ title: "I love redux", editing: false },
-			{ title: "The redux song", editing: false },
-			{ title: "Run to the redux hill", editing: false },
-		],
-	},
+	initialState: [
+		{ title: "I love redux", editing: false },
+		{ title: "The redux song", editing: false },
+		{ title: "Run to the redux hill", editing: false },
+	],
 	reducers: {
 		addSong: (state, action) => {
-			return {
-				songs: [action.payload, ...state.songs],
-			}
+			state.push(action.payload)
 		},
 		removeSong: (state, action) => {
-			return {
-				songs: state.songs.filter((s, i) => i !== action.payload),
-			}
+			state.splice(action.payload, 1)
 		},
 		editSong: (state, action) => {
-			const song = state.songs[action.payload]
+			const song = state[action.payload]
 			song.editing = true
 		},
 		updateSong: {
 			reducer(state, action) {
 				const { title, index } = action.payload
-				const song = state.songs[index]
+				const song = state[index]
 				song.title = title
 				song.editing = false
 			},
@@ -255,7 +233,7 @@ const songSlice = createSlice({
 			},
 		},
 		cancelEdit: (state, action) => {
-			const song = state.songs[action.payload]
+			const song = state[action.payload]
 			song.editing = false
 		},
 	},
