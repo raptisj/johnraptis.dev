@@ -27,6 +27,14 @@
 		}
 	}
 
+	h3 {
+		margin-top: 60px;
+
+		@include breakpoint(mobile) {
+			margin-top: 50px;
+		}
+	}
+
 	section {
 		padding-bottom: 50px;
 	}

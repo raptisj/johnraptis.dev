@@ -1,20 +1,25 @@
 body {
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-size: 16px;
 	margin: 0;
 }
 
-h1, h2, h3, h4 {
-	font-family: 'Nunito', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Nunito", sans-serif;
 }
 
 h2 {
 	font-size: 1.7rem;
 }
 
-p, li {
+p,
+li,
+code {
 	line-height: 1.71;
-	font-family: 'Maven Pro', sans-serif;
+	font-family: "Maven Pro", sans-serif;
 	font-size: 1.2rem;
 
 	@include breakpoint(mobile) {
@@ -33,12 +38,12 @@ ul {
 }
 
 ul li::before {
-	content: "\2022"; 
-	color: #666666; 
-	font-weight: bold; 
+	content: "\2022";
+	color: #666666;
+	font-weight: bold;
 	display: inline-block;
-	width: 1em; 
-	margin-left: -1em; 
+	width: 1em;
+	margin-left: -1em;
 }
 
 a {
@@ -63,9 +68,8 @@ blockquote {
 mark {
 	background: #f5f5dc;
 	padding: 4px;
-	border-radius: 3px;	
+	border-radius: 3px;
 }
-
 
 .code-title {
 	padding: 0;
