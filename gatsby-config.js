@@ -1,4 +1,4 @@
-const config = require('./data/siteConfig')
+const config = require("./data/siteConfig")
 
 module.exports = {
   siteMetadata: {
@@ -25,7 +25,7 @@ module.exports = {
         name: `assets`,
       },
     },
-     {
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/pages`,
@@ -59,7 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-         trackingId: config.googleAnalyticsID,
+        trackingId: config.googleAnalyticsID,
       },
     },
     `gatsby-plugin-feed`,
@@ -75,9 +75,15 @@ module.exports = {
         icon: `content/assets/favicon.png`,
       },
     },
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://www.johnraptis.dev`,
+      },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
