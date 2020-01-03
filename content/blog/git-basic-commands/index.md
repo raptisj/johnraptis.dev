@@ -187,7 +187,7 @@ To add a remote URL
 git remote add origin https://github.com/[username]/[repository-name].git
 ```
 
-Note: The name origin is a convention. It could be anything, like banana.
+**Note:** The name origin is a convention. It could be anything, like banana.
 
 To replace an existing URL
 
@@ -248,6 +248,8 @@ git reset --hard 9e5e6a4
 ```
 
 And by adding the <span class="highlight-in-text">--hard</span> flag the same will apply but the changes will go back to the working directory, like nothing was added or committed.
+
+> To learn more about **reset** you can check [this](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified).
 
 ##using ssh
 
