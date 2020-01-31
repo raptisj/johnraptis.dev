@@ -34,7 +34,7 @@ npm init -y
 npm install json-server
 ```
 
-We are going to create a <span class="highlight-in-text">db.</span>file where our data going to be stored just like a server.
+We are going to create a <span class="highlight-in-text">db.json</span>file where our data going to be stored just like a server.
 
 ```json
 {
@@ -89,7 +89,7 @@ Our script will look like this.
 "db": "json-server --watch index.js --port 3002" 
 ```
 
-And again by running npm run db we have yet another server.
+And again by running <span class="highlight-in-text">npm run db</span> we have yet another server.
 
 
 ##Custom Routes
