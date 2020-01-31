@@ -48,7 +48,7 @@ const Bio = () => {
       <p>
         Written by <strong>{author}</strong>.
         <br />
-        I like writing about Javascript, SCSS and programming fundamentals in general.
+        In love with Javascript and programming fundamentals in general.
         {` `}
         <br />
         <a href={`https://twitter.com/${social.twitter}`} target="_blank">
