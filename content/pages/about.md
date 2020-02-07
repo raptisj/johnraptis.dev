@@ -5,7 +5,7 @@ template: page
 ---
 
 I'm John and I'm a web developer from Greece. Besides documenting what I learn, I was intriged
-by the concept of [public learning](https://www.swyx.io/writing/learn-in-public/) and having a space of your own. My personal playground I guess.
+by the concept of [public learning](https://www.swyx.io/writing/learn-in-public/) and having a space of my own.
 
 - **Email:** <a href="#0">johnsitpar@gmail.com</a>(_yes. It's raptis backwards!!_)
 
@@ -23,9 +23,9 @@ by the concept of [public learning](https://www.swyx.io/writing/learn-in-public/
 
 ##As for now
 
-- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=O8cgxZsAkvw" target="_blank">Fkj - Moments</a>
-- **Currently reading:** The autobiography of Malcom X
-- **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=F9Zv6MGdh7Y" target="_blank">Why your MUSIC sounds 12 Shades of Grey
+- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=wpC5NRhLbuM" target="_blank">Mammal Hands - Quiet Fire</a>
+- **Currently reading:** Skin in the game _by Nasim Taleb_
+- **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=GSW9MGmegOg" target="_blank">“Navalisms” - Naval Ravikant at New Frontiers
   </a>
 
 <span class="caution-msg"> **Caution:** Frequent and unpredictable updates may apply </span>
