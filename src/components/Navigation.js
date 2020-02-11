@@ -4,12 +4,39 @@ import github from "../../content/assets/github-icon.svg"
 import twitter from "../../content/assets/twitter-icon.svg"
 import favicon from "../../content/assets/favicon.png"
 
+
+
+
+
 const Navigation = () => {
+
+  const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+	    window.addEventListener('scroll', navOnScroll)
+	}, [scrolled])
+
+
+
+  const navOnScroll = () => {
+    if (window.scrollY > 80) {
+       setScrolled(true)
+       console.log('yes')
+    } else {
+      console.log('no')
+
+      setScrolled(false)
+       }
+}
+
+
   return (
     <Fragment>
       <div className="ball"></div>
       <div className="tilt-bg"></div>
-      <nav className="nav">
+      {/* <nav className="nav"> */}
+      <nav className={scrolled ? 'nav scrolled' : 'nav'}>
+
         <div className="nav__container">
           <div className="nav__brand">
             <Link to="/">

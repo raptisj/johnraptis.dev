@@ -1,11 +1,18 @@
 .nav {
-	height: 58px;
+	height: 68px;
 	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 3;
 	background: #ffffff;
+	transition: height .3s ease;
+}
+
+
+.scrolled {
 	box-shadow: 1px 1px 10px #999999;
+	height: 58px;
+	transition: height .3s ease;
 }
 
 .nav__container {
