@@ -14,8 +14,8 @@ const IndexPage = () => {
         <h1 className="main-title">Hi people</h1>
         <p>I'm John. I'm a web developer from Greece.</p>
         <p>
-          I like writing about Javascript and programming fundamentals. If I can
-          explain it, I sure understand a little something.
+          I like writing about JavaScript, React and programming fundamentals.
+          If I can explain it, I sure understand a little something.
         </p>
       </section>
 

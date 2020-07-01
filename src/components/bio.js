@@ -48,11 +48,11 @@ const Bio = () => {
       <p>
         Written by <strong>{author}</strong>.
         <br />
-        In love with Javascript and programming fundamentals in general.
+        In love with JavaScript, React and programming fundamentals in general.
         {` `}
         <br />
         <a href={`https://twitter.com/${social.twitter}`} target="_blank">
-           Follow me on Twitter
+          Follow me on Twitter
         </a>
       </p>
     </div>

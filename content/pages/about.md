@@ -7,6 +7,8 @@ template: page
 I'm John and I'm a web developer from Greece. Besides documenting what I learn, I was intriged
 by the concept of [public learning](https://www.swyx.io/writing/learn-in-public/) and having a space of my own.
 
+I'm a self-taught dev who wrote his first line of code at the tender age of 28 and got his first job 18 months later. I like to dabble with different technologies and learn new concepts.
+
 - **Email:** <a href="#0">johnsitpar@gmail.com</a>(_yes. It's raptis backwards!!_)
 
 ##My Life in bullets
@@ -19,12 +21,12 @@ by the concept of [public learning](https://www.swyx.io/writing/learn-in-public/
 - **2013** Came back to Greece. Moved to Thessaloniki, where I took odd jobs to sustain myself. I stopped playing music completely.
 - **2016**(_October_) Started coding after watching a random tutorial(don't ask how).
 - **2018**(_May_) Got my first job as web developer.
-- **2019**(_November_) Started working at [Loceye](https://www.loceye.io/) as a Javascript developer.
+- **2019**(_November_) Started working at [VisualEyes](https://www.visualeyes.design/)/[Loceye](https://www.loceye.io/) as a JavaScript developer.
 
 ##As for now
 
-- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=wpC5NRhLbuM" target="_blank">Mammal Hands - Quiet Fire</a>
-- **Currently reading:** Skin in the game _by Nasim Taleb_
+- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=dKh1yvmZpgU&list=PLXK241ukbxoNUjrHXMRdXRNhtUKMY-qIn&index=6&t=0s" target="_blank">Tycho - Simulcast</a>
+- **Currently reading:** Infinite Jest _by David Foster Wallace_
 - **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=GSW9MGmegOg" target="_blank">“Navalisms” - Naval Ravikant at New Frontiers
   </a>
 
