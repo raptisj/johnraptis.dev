@@ -4,8 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Helmet from 'react-helmet'
-// import { rhythm, scale } from "../utils/typography"
+import Helmet from "react-helmet"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,7 +13,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-       <Helmet title={`${post.frontmatter.title} - John Raptis`} />
+        <Helmet title={`${post.frontmatter.title} - John Raptis`} />
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
