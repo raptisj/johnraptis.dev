@@ -9,17 +9,25 @@ const Navigation = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", navOnScroll)
-  }, [scrolled])
+
+    return _ => {
+      window.removeEventListener("scroll", navOnScroll)
+    }
+  })
 
   const navOnScroll = () => {
     if (window.scrollY > 80) {
       setScrolled(true)
-      console.log("yes")
     } else {
-      console.log("no")
+      // console.log("no")
 
       setScrolled(false)
     }
+    // console.log((window.scrollY / document.body.clientHeight) * 100)
+    const scrollPercentage = (window.scrollY / document.body.clientHeight) * 100
+    const logoIcon = document.querySelector(".nav__brand a img")
+    // logoIcon.style.transform = `rotate(-${scrollPercentage}deg)`
+    logoIcon.style.transform = `rotate(-${window.scrollY / 10}deg)`
   }
 
   return (
