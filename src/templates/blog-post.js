@@ -10,21 +10,24 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
+    const { title, description, date } = post.frontmatter
+    const { html, timeToRead } = post
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Helmet title={`${post.frontmatter.title} - John Raptis`} />
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
+        <Helmet title={`${title} - John Raptis`} />
+        <SEO title={title} description={description || post.excerpt} />
+
         <article className="post">
           <header className="post-title">
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
+            <h1>{title}</h1>
+            <p>{date}</p>
+            <span> {timeToRead}min</span>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          <section dangerouslySetInnerHTML={{ __html: html }} />
           <hr />
+
           <footer>
             <Bio />
           </footer>
@@ -48,6 +51,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
