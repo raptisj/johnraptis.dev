@@ -22,7 +22,7 @@ class BlogPostTemplate extends React.Component {
           <header className="post-title">
             <h1>{title}</h1>
             <p>{date}</p>
-            <span> {timeToRead}min</span>
+            <span> {timeToRead} min read</span>
           </header>
 
           <section dangerouslySetInnerHTML={{ __html: html }} />

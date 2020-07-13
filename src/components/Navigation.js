@@ -19,14 +19,12 @@ const Navigation = () => {
     if (window.scrollY > 80) {
       setScrolled(true)
     } else {
-      // console.log("no")
-
       setScrolled(false)
     }
     // console.log((window.scrollY / document.body.clientHeight) * 100)
     const scrollPercentage = (window.scrollY / document.body.clientHeight) * 100
     const logoIcon = document.querySelector(".nav__brand a img")
-    // logoIcon.style.transform = `rotate(-${scrollPercentage}deg)`
+
     logoIcon.style.transform = `rotate(-${window.scrollY / 10}deg)`
   }
 
@@ -43,10 +41,12 @@ const Navigation = () => {
               <span className="nav__site-title">John Raptis</span>
             </Link>
           </div>
+
           <div className="nav__links">
             <Link to="/about">About</Link>
             <Link to="/blog">Articles</Link>
           </div>
+
           <div className="nav__social">
             <a
               href="https://twitter.com/JohnRaptisM"
