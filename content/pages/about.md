@@ -25,8 +25,8 @@ I'm a self-taught dev who wrote his first line of code at the tender age of 28 a
 
 ##As for now
 
-- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=dKh1yvmZpgU&list=PLXK241ukbxoNUjrHXMRdXRNhtUKMY-qIn&index=6&t=0s" target="_blank">Tycho - Simulcast</a>
-- **Currently reading:** Infinite Jest _by David Foster Wallace_
+- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=JaXGxmWH9VY" target="_blank">Arve Henriksen - Time Lapse</a>
+- **Currently reading:** Civilized to Death _by Christopher Ryan_
 - **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=GSW9MGmegOg" target="_blank">“Navalisms” - Naval Ravikant at New Frontiers
   </a>
 
