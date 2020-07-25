@@ -57,7 +57,7 @@ const Navigation = () => {
               <img src={twitter} className="nav__social-icons" alt="twitter" />
             </a>
             <a
-              href="https://github.com/john2220"
+              href="https://github.com/raptisj"
               target="_blank"
               rel="noopener noreferrer"
               title="github"

@@ -6,7 +6,6 @@
   z-index: 3;
   background: #ffffff;
   transition: height 0.3s ease;
-  //   border-bottom: 2px dashed #8b0000;
 
   &::after {
     content: "";
@@ -14,13 +13,11 @@
     left: 0;
     height: 2px;
     width: 100%;
-    // background: #8b0000;
     border-bottom: 2px dashed #8b0000;
   }
 }
 
 .scrolled {
-  // box-shadow: 1px 1px 10px #999999;
   height: 58px;
   transition: height 0.3s ease;
 }

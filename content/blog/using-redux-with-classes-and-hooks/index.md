@@ -15,7 +15,7 @@ I personally like it.
 
 Source code and demo down below
 
-- [view source](https://github.com/john2220/redux-tutorial) (example with class components is in a different branch named class_example)
+- [view source](https://github.com/raptisj/redux-tutorial) (example with class components is in a different branch named class_example)
 - [view demo](https://wizardly-jones-cdf077.netlify.com/)
 
 ##Why Redux(Quickly)?
@@ -240,10 +240,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(SongList);
 Or we can destructure.
 
 ```jsx
-export default connect(
-  mapStateToProps,
-  { actionOne, actionTwo }
-)(SongList)
+export default connect(mapStateToProps, { actionOne, actionTwo })(SongList)
 ```
 
 Since we don't have any actions yet we pass null.
@@ -254,10 +251,7 @@ const mapStateToProps = state => ({
   songs: state.songs,
 })
 
-export default connect(
-  mapStateToProps,
-  null
-)(SongList)
+export default connect(mapStateToProps, null)(SongList)
 ```
 
 Now we can access the songs we defined in <span class="highlight-in-text">mapStateToProps</span> as props in our component.
@@ -286,10 +280,7 @@ const mapStateToProps = state => ({
   songs: state.songs,
 })
 
-export default connect(
-  mapStateToProps,
-  null
-)(SongList)
+export default connect(mapStateToProps, null)(SongList)
 ```
 
 Now let's see how can we add new songs, delete songs and update songs as well.
@@ -637,16 +628,13 @@ const mapStateToProps = state => ({
   songs: state.songs,
 })
 
-export default connect(
-  mapStateToProps,
-  {
-    addSong,
-    removeSong,
-    editSong,
-    updateSong,
-    cancelEdit,
-  }
-)(SongList)
+export default connect(mapStateToProps, {
+  addSong,
+  removeSong,
+  editSong,
+  updateSong,
+  cancelEdit,
+})(SongList)
 ```
 
 <div class="filename">songActions.js</div>

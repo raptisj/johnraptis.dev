@@ -13,7 +13,7 @@ RTK provides us with some cool functions and utilities that take care a lot of r
 
 Since this is a brief starter example, I highly recommend taking a look at the official [documentation](https://redux-toolkit.js.org/), which I think is very well written.
 
-Here is the finished [code](https://github.com/john2220/redux-tutorial/tree/redux_toolkit). If you want to see the 'vanilla' version go to the master branch.
+Here is the finished [code](https://github.com/raptisj/redux-tutorial/tree/redux_toolkit). If you want to see the 'vanilla' version go to the master branch.
 
 Let's start
 
@@ -64,10 +64,10 @@ Regular Redux
 import { ADD_SONG } from "./types" // somewhere else
 
 export const addSong = song => {
-	return {
-		type: ADD_SONG,
-		payload: song,
-	}
+  return {
+    type: ADD_SONG,
+    payload: song,
+  }
 }
 ```
 
@@ -85,14 +85,14 @@ Regular Redux
 
 ```jsx
 export default function(state = initialState, action) {
-	switch (action.type) {
-		case ADD_SONG:
-			return {
-				songs: [action.payload, ...state.songs],
-			}
-		default:
-			return state
-	}
+  switch (action.type) {
+    case ADD_SONG:
+      return {
+        songs: [action.payload, ...state.songs],
+      }
+    default:
+      return state
+  }
 }
 ```
 
@@ -127,15 +127,15 @@ export const removeSong = createAction("DELETE_SONG")
 export const editSong = createAction("EDIT_SONG")
 
 export const updateSong = createAction("UPDATE_SONG", function prepare(
-	title,
-	index
+  title,
+  index
 ) {
-	return {
-		payload: {
-			title,
-			index,
-		},
-	}
+  return {
+    payload: {
+      title,
+      index,
+    },
+  }
 })
 
 export const cancelEdit = createAction("CANCEL_EDIT")
@@ -156,35 +156,35 @@ We import our <span class="highlight-in-text">createReducer</span>. We pass it o
 
 ```jsx
 const initialState = [
-	{ title: "I love redux", editing: false },
-	{ title: "The redux song", editing: false },
-	{ title: "Run to the redux hill", editing: false },
+  { title: "I love redux", editing: false },
+  { title: "The redux song", editing: false },
+  { title: "Run to the redux hill", editing: false },
 ]
 
 // Reducer
 export default createReducer(initialState, {
-	[addSong]: (state, action) => {
-		state.push(action.payload)
-	},
-	[removeSong]: (state, action) => {
-		state.splice(action.payload, 1)
-	},
-	[editSong]: (state, action) =>
-		state.map((song, i) =>
-			i === action.payload
-				? { ...song, editing: true }
-				: { ...song, editing: false }
-		),
-	[updateSong]: (state, action) =>
-		state.map((song, i) =>
-			i === action.payload.index
-				? { ...song, title: action.payload.title, editing: false }
-				: song
-		),
-	[cancelEdit]: (state, action) =>
-		state.map((song, i) =>
-			i === action.payload ? { ...song, editing: false } : song
-		),
+  [addSong]: (state, action) => {
+    state.push(action.payload)
+  },
+  [removeSong]: (state, action) => {
+    state.splice(action.payload, 1)
+  },
+  [editSong]: (state, action) =>
+    state.map((song, i) =>
+      i === action.payload
+        ? { ...song, editing: true }
+        : { ...song, editing: false }
+    ),
+  [updateSong]: (state, action) =>
+    state.map((song, i) =>
+      i === action.payload.index
+        ? { ...song, title: action.payload.title, editing: false }
+        : song
+    ),
+  [cancelEdit]: (state, action) =>
+    state.map((song, i) =>
+      i === action.payload ? { ...song, editing: false } : song
+    ),
 })
 ```
 
@@ -204,47 +204,47 @@ Note that it seems like I'm mutating the state directly, but I'm not.
 import { createSlice } from "@reduxjs/toolkit"
 
 const songSlice = createSlice({
-	name: "songs",
-	initialState: [
-		{ title: "I love redux", editing: false },
-		{ title: "The redux song", editing: false },
-		{ title: "Run to the redux hill", editing: false },
-	],
-	reducers: {
-		addSong: (state, action) => {
-			state.push(action.payload)
-		},
-		removeSong: (state, action) => {
-			state.splice(action.payload, 1)
-		},
-		editSong: (state, action) => {
-			const song = state[action.payload]
-			song.editing = true
-		},
-		updateSong: {
-			reducer(state, action) {
-				const { title, index } = action.payload
-				const song = state[index]
-				song.title = title
-				song.editing = false
-			},
-			prepare(title, index) {
-				return { payload: { title, index } }
-			},
-		},
-		cancelEdit: (state, action) => {
-			const song = state[action.payload]
-			song.editing = false
-		},
-	},
+  name: "songs",
+  initialState: [
+    { title: "I love redux", editing: false },
+    { title: "The redux song", editing: false },
+    { title: "Run to the redux hill", editing: false },
+  ],
+  reducers: {
+    addSong: (state, action) => {
+      state.push(action.payload)
+    },
+    removeSong: (state, action) => {
+      state.splice(action.payload, 1)
+    },
+    editSong: (state, action) => {
+      const song = state[action.payload]
+      song.editing = true
+    },
+    updateSong: {
+      reducer(state, action) {
+        const { title, index } = action.payload
+        const song = state[index]
+        song.title = title
+        song.editing = false
+      },
+      prepare(title, index) {
+        return { payload: { title, index } }
+      },
+    },
+    cancelEdit: (state, action) => {
+      const song = state[action.payload]
+      song.editing = false
+    },
+  },
 })
 
 export const {
-	addSong,
-	removeSong,
-	editSong,
-	updateSong,
-	cancelEdit,
+  addSong,
+  removeSong,
+  editSong,
+  updateSong,
+  cancelEdit,
 } = songSlice.actions
 
 export default songSlice.reducer
