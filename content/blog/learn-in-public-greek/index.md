@@ -7,7 +7,7 @@ template: post
 
 ## _Ο γρηγορότερος τρόπος να μάθεις_
 
-Μεταφραση απο το πρωτότυπο. [Learn in Public](https://www.swyx.io/writing/learn-in-public/)
+_Μεταφραση απο το πρωτότυπο_. [Learn in Public](https://www.swyx.io/writing/learn-in-public/) του [Shawn Wang](https://twitter.com/swyx)
 
 Αν υπάρχει ενας χρυσός κανόνας είναι αυτός, οπότε αρχίζω με αυτόν. Όλοι οι αλλοι κανόνες είναι επεξηγήσεις του πρώτου.
 
