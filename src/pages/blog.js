@@ -40,7 +40,9 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { slug: { nin: "/about/" } } }
+      filter: {
+        fields: { slug: { nin: ["/about/", "/learn-in-public-greek/"] } }
+      }
     ) {
       edges {
         node {
