@@ -3,6 +3,7 @@ title: Using Redux with Classes and Hooks
 date: 2019-10-15
 description: The state managment tool that people love to hate
 template: post
+thumb: ../../assets/redux-logo.jpg
 ---
 
 In this article we are going to see how to use Redux. The state management tool people love to hate.

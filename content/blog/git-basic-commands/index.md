@@ -3,6 +3,7 @@ title: Basic Git commands you should know
 date: 2020-01-02
 description: They will definitely come in handy
 template: post
+thumb: ../../assets/git.png
 ---
 
 Git and Github play an essential role in every developers workflow. They give us a very sophisticated way to keep track of our projects history. Knowing how to use them give us the ability to work more efficiently.
