@@ -21,7 +21,7 @@ But first a quick reference.
 ##So what is Git?(Quickly)
 
 Git is a system that tracks changes in our code. You will often hear it being referred as 'version control'. Why?
-Because it keeps a history of all previous versions of our source code. This gives the ability to have multiple developers working in parallel and sharing code. In order to do that we would have a local Git repository which lives locally in our computer, and a remote Git repository which lives in a server(Github, Gitlab, etc..).
+Because it keeps a history of all previous versions of our source code. This gives the ability to have multiple developers working in parallel and sharing code. In order to do that we would have a local Git repository which lives locally in our computer, and a remote Git repository which lives in a server(Github, GitLab, etc..).
 
 ###git config
 In order to work locally we will have to set our username and email.

@@ -3,6 +3,7 @@ title: Up and running with Redux Toolkit
 date: 2019-12-14
 description: A better way to write Redux logic
 template: post
+thumb: ../../assets/redux-logo.jpg
 ---
 
 A couple weeks ago I wrote a post about [Using Redux with Classes and Hooks](https://www.johnraptis.dev/using-redux-with-classes-and-hooks/). In this post I will take that same example app I made and rewrite it using Redux Toolkit.

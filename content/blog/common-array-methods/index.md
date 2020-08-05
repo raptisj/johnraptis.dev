@@ -3,6 +3,7 @@ title: Common Array Methods
 date: 2019-09-26
 description: Using push, pop, find and more
 template: post
+thumb: ../../assets/javascript-logo.png
 ---
 
 In this article we are going to see some more array methods like concat, push, slice, splice, find and more.
@@ -14,9 +15,9 @@ With out any more talking. Lets makes this clear, once and for all.
 <span class="highlight-in-text">push()</span> does exactly what it says. It pushes new elements in an existing array.
 
 ```javascript
-let names = ['Miles', 'John', 'Anna', 'Nick']
+let names = ["Miles", "John", "Anna", "Nick"]
 
-names.push('Paul')
+names.push("Paul")
 
 console.log(names) // ['Miles', 'John', 'Anna', 'Nick', 'Paul']
 ```
@@ -29,9 +30,9 @@ Note that our initial array was mutated. This leads us to our next array method 
 If we try to <span class="highlight-in-text">concat()</span> something to the initial array it will simply return the array unchanged.
 
 ```javascript
-let names = ['Miles', 'John', 'Anna', 'Nick']
+let names = ["Miles", "John", "Anna", "Nick"]
 
-names.concat('Paul')
+names.concat("Paul")
 
 console.log(names) // ['Miles', 'John', 'Anna', 'Nick']
 ```
@@ -39,7 +40,7 @@ console.log(names) // ['Miles', 'John', 'Anna', 'Nick']
 but
 
 ```javascript
-const newNames = names.concat('Paul')
+const newNames = names.concat("Paul")
 
 console.log(newNames) // ['Miles', 'John', 'Anna', 'Nick', 'Paul']
 ```
@@ -49,7 +50,7 @@ console.log(newNames) // ['Miles', 'John', 'Anna', 'Nick', 'Paul']
 <span class="highlight-in-text">pop()</span> removes the last element from an array. Pretty straight forward.
 
 ```javascript
-let names = ['Miles', 'John', 'Anna', 'Nick']
+let names = ["Miles", "John", "Anna", "Nick"]
 
 names.pop()
 
@@ -61,7 +62,7 @@ console.log(names) // ['Miles', 'John', 'Anna']
 <span class="highlight-in-text">slice()</span> returns a portion of an array in a new array. It takes two parameters. Where we want to specify our starting and ending point. The numbers are index based so the ending point is not included.
 
 ```javascript
-let names = ['Miles', 'John', 'Anna', 'Nick']
+let names = ["Miles", "John", "Anna", "Nick"]
 
 const someNames = names.slice(0, 2)
 
@@ -73,9 +74,9 @@ console.log(someNames) // ['Miles', 'John']
 Unlike <span class="highlight-in-text">push()</span> where the new item it's being added at the end of the array, the <span class="highlight-in-text">splice()</span> method updates the array by either removing a specific element or adding a new element in a specific place in an array.
 
 ```javascript
-let names = ['Miles', 'John', 'Anna', 'Nick']
+let names = ["Miles", "John", "Anna", "Nick"]
 
-names.splice(2, 0, 'Paul')
+names.splice(2, 0, "Paul")
 
 console.log(names) // ['Miles', 'John', 'Paul', 'Anna', 'Nick']
 ```
@@ -85,7 +86,7 @@ The 2 in this examples specifies the index position, where you want your element
 ```javascript
 //replace
 
-names.splice(2, 1, 'Paul')
+names.splice(2, 1, "Paul")
 
 console.log(names) // ['Miles', 'John', 'Paul', 'Nick']
 ```
@@ -100,11 +101,11 @@ console.log(names) // ['Miles', 'John', 'Nick']
 
 ##find()
 
-<span class="highlight-in-text">find()</span> method returns the first value of the array that matches a certain condition. 
+<span class="highlight-in-text">find()</span> method returns the first value of the array that matches a certain condition.
 In this case we find the first name in the array with four letters.
 
 ```javascript
-let names = ['Miles', 'John', 'Anna', 'Nick']
+let names = ["Miles", "John", "Anna", "Nick"]
 
 const findName = names.find(n => n.length === 4)
 
