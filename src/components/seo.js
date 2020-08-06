@@ -49,7 +49,7 @@ function SEO({ description, lang, meta, title, thumbnail }) {
           content: metaDescription,
         },
         {
-          name: `og-image`,
+          name: `og:image`,
           content: metaImage,
         },
         {
