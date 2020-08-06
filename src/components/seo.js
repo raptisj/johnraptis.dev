@@ -27,12 +27,13 @@ function SEO({ description, lang, meta, title, thumbnail }) {
     `
   )
 
-  let metaImage = config.logo
+  let metaImage = `${site.siteMetadata.siteUrl}${config.logo}`
 
   if (thumbnail) {
     metaImage = `${site.siteMetadata.siteUrl}${thumbnail.childImageSharp.fixed.src}`
   }
 
+  console.log(metaImage)
   const metaDescription = description || site.siteMetadata.description
 
   return (
