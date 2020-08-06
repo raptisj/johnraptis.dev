@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title, thumbnail }) {
     metaImage = `${site.siteMetadata.siteUrl}${thumbnail.childImageSharp.fixed.src}`
   }
 
-  console.log(metaImage)
+  // console.log(metaImage)
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -66,7 +66,7 @@ function SEO({ description, lang, meta, title, thumbnail }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
