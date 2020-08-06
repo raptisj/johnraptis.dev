@@ -13,12 +13,16 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title
     const { title, description, date, thumb } = post.frontmatter
     const { html, timeToRead } = post
-    console.log(thumb)
+    // console.log(thumb)
     // console.log(title)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet title={`${title} - John Raptis`} />
-        <SEO title={title} description={description || post.excerpt} />
+        <SEO
+          title={title}
+          description={description || post.excerpt}
+          thumbnail={thumb}
+        />
 
         <article className="post">
           <header className="post-title">
