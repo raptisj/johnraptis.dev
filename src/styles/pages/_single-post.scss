@@ -22,6 +22,11 @@
   }
 }
 
+.post-thumbnail {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 .post {
   a {
     &:hover {
