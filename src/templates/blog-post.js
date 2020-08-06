@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         description
         thumb {
           childImageSharp {
-            fixed(width: 400, height: 400) {
+            fixed(width: 100, height: 100) {
               ...GatsbyImageSharpFixed
             }
           }
