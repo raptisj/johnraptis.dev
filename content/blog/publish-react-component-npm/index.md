@@ -1,9 +1,9 @@
 ---
-title: Publish a React component to NPM
+title: Publish a React Component to NPM
 date: 2020-08-18
 description: The simplest Rollup boilerplate.
 template: post
-thumb: ../../assets/rollup-logo.png
+thumb: ../../assets/rollup-logo2.png
 ---
 
 In this article I'm going to walk you through the process of creating the simplest boilerplate environment there is, so you can publish your own React components to NPM. We will use [Rollup](https://rollupjs.org/guide/en/) to achieve this.
@@ -34,21 +34,21 @@ npm init -y
 
 Then we have to install a couple of dependencies.
 
-- **<span class="highlight-in-text">@babel/code</span>**: compiles new JavaScript syntax to older versions for browser compatibility
+- <span class="highlight-in-text">@babel/code</span>: compiles new JavaScript syntax to older versions for browser compatibility
 
-- **<span class="highlight-in-text">@babel/preset-env</span>**: presets for configuring babel environment
+- <span class="highlight-in-text">@babel/preset-env</span>: presets for configuring babel environment
 
-- **<span class="highlight-in-text">@babel/preset-react</span>**: tells babel-transpiler we are using react
+- <span class="highlight-in-text">@babel/preset-react</span>: tells babel-transpiler we are using react
 
-- **<span class="highlight-in-text">react</span>**
+- <span class="highlight-in-text">react</span>
 
-- **<span class="highlight-in-text">rollup</span>**
+- <span class="highlight-in-text">rollup</span>
 
-- **<span class="highlight-in-text">rollup-plugin-babel</span>**: In order to use babel wit Rollup
+- <span class="highlight-in-text">rollup-plugin-babel</span>: In order to use babel wit Rollup
 
-- **<span class="highlight-in-text">rollup-plugin-uglify</span>**: Minifies the final bundle.
+- <span class="highlight-in-text">rollup-plugin-uglify</span>: Minifies the final bundle.
 
-- **<span class="highlight-in-text">rollup-plugin-node-resolve</span>**: finds external modules.
+- <span class="highlight-in-text">rollup-plugin-node-resolve</span>: finds external modules.
 
 ```
 npm install @babel/core @babel/preset-env @babel/preset-react react rollup rollup-plugin-babel rollup-plugin-node-resolve rollup-plugin-uglify --save-dev
@@ -80,7 +80,7 @@ export default {
 ```
 
 - **input**: Here we specify the path for our entry point. In our case is <span class="highlight-in-text">package/index.js</span> where everything starts.
-- **output**: It's an object that we specify the format of our output and the path we want our bundle to be placed. **Note:**: In our case we import the path from our <span class="highlight-in-text">package.json</span> _main_ field which is specified as <span class="highlight-in-text">dist/index.js</span>. Rollup will create a <span class="highlight-in-text">dist</span> folder and place the bundle inside.
+- **output**: It's an object that we specify the format of our output and the path we want our bundle to be placed. In our case we import the path from our <span class="highlight-in-text">package.json</span> _main_ field which is specified as <span class="highlight-in-text">dist/index.js</span>. Rollup will create a <span class="highlight-in-text">dist</span> folder and place the bundle inside.
 - **external**: It's an array that we can specify any external dependencies that we want to keep as external to the bundle. Here we set <span class="highlight-in-text">react</span> as external.
 - **plugins**: An array the we place all of our plugins. Notice that we use the <span class="highlight-in-text">rollup-plugon-babel</span> to exclude <span class="highlight-in-text">node_modules</span> thus avoiding compiling unwanted libraries.
 
