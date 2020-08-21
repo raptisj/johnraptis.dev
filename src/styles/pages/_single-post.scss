@@ -20,6 +20,11 @@
     padding: 2px 5px;
     margin-left: 8px;
   }
+
+  span + p {
+    font-style: italic;
+    margin-left: 8px;
+  }
 }
 
 .post-thumbnail {

@@ -11,10 +11,9 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { title, description, date, thumb } = post.frontmatter
+    const { title, description, date, thumb, updated } = post.frontmatter
     const { html, timeToRead } = post
-    // console.log(thumb)
-    // console.log(title)
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet title={`${title} - John Raptis`} />
@@ -35,6 +34,7 @@ class BlogPostTemplate extends React.Component {
             <h1>{title}</h1>
             <p>{date}</p>
             <span> {timeToRead} min read</span>
+            {updated && <p>Updated: {updated}</p>}
           </header>
 
           <section dangerouslySetInnerHTML={{ __html: html }} />
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        updated(formatString: "MMMM DD, YYYY")
         description
         thumb {
           childImageSharp {

@@ -4,6 +4,7 @@ date: 2020-08-18
 description: The simplest Rollup boilerplate.
 template: post
 thumb: ../../assets/rollup-logo2.png
+updated: 2020-08-21
 ---
 
 In this article I'm going to walk you through the process of creating the simplest boilerplate environment there is, so you can publish your own React components to NPM. We will use [Rollup](https://rollupjs.org/guide/en/) to achieve this.
@@ -46,12 +47,12 @@ Then we have to install a couple of dependencies.
 
 - <span class="highlight-in-text">rollup-plugin-babel</span>: In order to use babel wit Rollup
 
-- <span class="highlight-in-text">rollup-plugin-uglify</span>: Minifies the final bundle.
+- <span class="highlight-in-text">rollup-plugin-commonjs</span>: Converts CommonJS modules to ES2015 before Rollup can process them.
 
 - <span class="highlight-in-text">rollup-plugin-node-resolve</span>: finds external modules.
 
 ```
-npm install @babel/core @babel/preset-env @babel/preset-react react rollup rollup-plugin-babel rollup-plugin-node-resolve rollup-plugin-uglify --save-dev
+npm install @babel/core @babel/preset-env @babel/preset-react react rollup rollup-plugin-babel rollup-plugin-node-resolve rollup-plugin-commonjs --save-dev
 ```
 
 After installing all of our dependencies we create a <span class="highlight-in-text">rollup.config.js</span> in our root directory.
@@ -59,7 +60,7 @@ After installing all of our dependencies we create a <span class="highlight-in-t
 ```javascript
 import resolve from "rollup-plugin-node-resolve"
 import babel from "rollup-plugin-babel"
-import { uglify } from "rollup-plugin-uglify"
+import commonjs from "rollup-plugin-commonjs"
 import pkg from "./package.json"
 
 export default {
@@ -74,7 +75,7 @@ export default {
       exclude: "node_modules/**",
     }),
     resolve(),
-    uglify(),
+    commonjs(),
   ],
 }
 ```
