@@ -4,7 +4,12 @@ date: 2019-10-15
 description: The state managment tool that people love to hate
 template: post
 thumb: ../../assets/redux-logo.jpg
+updated: 2020-08-25
 ---
+
+_**Update**: I highly recommend checking out [this](https://www.johnraptis.dev/redux-toolkit/) article showing you how you can do all this with [Redux Toolkit](https://redux-toolkit.js.org/). It simplifies a lot of stuff and removes a lot of the boilerplate._
+
+<hr />
 
 In this article we are going to see how to use Redux. The state management tool people love to hate.
 I personally like it.
@@ -23,7 +28,7 @@ Source code and demo down below
 
 Redux is a state management tool that helps you control and update your applications state more efficiently.
 Redux itself is a standalone library which means it's framework agnostic. You can use it with any framework but it's usually used with React.
-Why should you use it? Passing props up and down can get nasty if you are dealing with larger applicatons. With Redux all your state lives in a single place, which encourage good React architecture.
+Why should you use it? Passing props up and down can get nasty if you are dealing with larger applications. With Redux all your state lives in a single place, which encourage good React architecture.
 
 ##Core Concepts
 
