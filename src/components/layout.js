@@ -1,14 +1,11 @@
 import React from "react"
-
-// import { rhythm, scale } from "../utils/typography"
 import Navigation from "./Navigation"
 import "../styles/main.scss"
 
 class Layout extends React.Component {
   render() {
-    const {  children } = this.props
-    // const rootPath = `${__PATH_PREFIX__}/`
-    // location, title,
+    const { children } = this.props
+
     return (
       <div>
         <Navigation />
@@ -20,7 +17,6 @@ class Layout extends React.Component {
         <footer className="footer">
           © {new Date().getFullYear()}, John Raptis
           {` `}
-          {/*<a href="https://www.gatsbyjs.org">John Raptis</a>*/}
         </footer>
       </div>
     )
