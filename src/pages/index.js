@@ -5,6 +5,8 @@ import Helmet from "react-helmet"
 import Projects from "../components/Projects"
 import projects from "../../data/projects"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
+import meme from "../../content/assets/meme.png"
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -14,12 +16,17 @@ const IndexPage = ({ data }) => {
       <Helmet title={`John Raptis – Developer`} />
       <SEO />
       <section className="home">
-        <h1 className="main-title">Hi people</h1>
-        <p>I'm John. I'm a web developer from Greece.</p>
-        <p>
-          I like writing about JavaScript, React and programming fundamentals.
-          If I can explain it, I sure understand a little something.
-        </p>
+        <div className="home__intro">
+          <h1 className="main-title">Hi people!</h1>
+          <p>John here. This is my space.</p>
+          <p>
+            I like writing about JavaScript, React and programming fundamentals.
+            If I can explain it, I sure understand a little something. Enjoy!!
+          </p>
+        </div>
+        <div className="home__image">
+          <img src={meme} alt="John Raptis" />
+        </div>
       </section>
 
       <section className="posts__grid">
