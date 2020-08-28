@@ -10,13 +10,14 @@ import meme from "../../content/assets/meme.png"
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
+  const { title, description } = data.site.siteMetadata
 
   return (
     <Layout>
       <Helmet title={`John Raptis – Developer`} />
-      <SEO />
+      <SEO title={title} description={description} />
       <section className="home">
-        <div className="home__intro">
+        <div>
           <h1 className="main-title">Hi people!</h1>
           <p>John here. This is my space.</p>
           <p>
@@ -64,6 +65,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(

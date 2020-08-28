@@ -7,11 +7,12 @@ import SEO from "../components/seo"
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
+  const { title, description } = data.site.siteMetadata
 
   return (
     <Layout>
       <Helmet title={`Articles - John Raptis`} />
-      <SEO />
+      <SEO title={title} description={description} />
       <h1 className="main-title">Articles</h1>
       <section className="posts__grid">
         {posts.map(({ node }) => {
@@ -36,6 +37,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(
