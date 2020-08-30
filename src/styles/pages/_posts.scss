@@ -32,9 +32,13 @@
   }
 }
 
+.post__link:hover .post__title {
+  color: #8b0000;
+}
+
 .post__title {
   display: block;
-  color: #8b0000;
+  color: #333;
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0;
@@ -54,18 +58,18 @@
 
 .latest__post {
   display: flex;
-  justify-content: space-between;
 
   a {
     display: block;
     background: #8b0000;
-    padding: 0.4rem 0.9rem;
-    border-radius: 4px;
+    padding: 0 0.5rem;
+    border-radius: 16px;
     color: #f8f8f8;
     border: 2px dashed #8b0000;
+    margin-left: 8px;
 
     &:hover {
-      background: #fff;
+      background: #f2f2f2;
       color: #8b0000;
     }
   }

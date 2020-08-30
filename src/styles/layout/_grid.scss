@@ -92,14 +92,26 @@
 }
 
 .main-title {
+  display: inline-block;
   margin: 0;
   padding: 40px 0 20px 0;
   font-size: 3rem;
   color: $mainTitleColor;
+  position: relative;
 
   @include breakpoint(mobile) {
     font-size: 2.6rem;
     padding: 0 0 20px 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: #8b000020;
+    bottom: 8px;
+    width: 126px;
+    height: 36px;
+    right: -10px;
   }
 }
 
