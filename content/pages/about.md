@@ -28,7 +28,7 @@ If you want to contact me and give me feedback or comment on something or to cor
 
 ##As for now
 
-- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=JaXGxmWH9VY" target="_blank">Arve Henriksen - Time Lapse</a>
+- **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=iAvVQgvjeZ8" target="_blank">Alfa Mist - Galaxy</a>
 - **Currently reading:** Civilized to Death _by Christopher Ryan_
 - **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=UaZeTmFBbGc" target="_blank">Possibly The Most Dangerous Animal In The World
   </a>
