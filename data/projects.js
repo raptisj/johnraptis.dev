@@ -1,22 +1,14 @@
 export default [
   {
-    title: "Second Miles",
-    source: "https://github.com/raptisj/johnraptis.dev/",
-    demo: "https://github.com/raptisj/johnraptis.dev/",
-    description: "A quiz game based on Miles Davis life.",
-    stack: "React, Redux",
+    title: "SpreadVote",
+    link: "https://github.com/raptisj/spread-vote-frontend",
+    description: "A petition app for voting guests for your favorite podcasts.",
+    state: "🛠️",
   },
   {
-    title: "Tip Giver",
-    source: "https://github.com/raptisj/johnraptis.dev/",
-    demo: "https://github.com/raptisj/johnraptis.dev/",
-    description: "A tip spliting machine based on hours worked.",
-    stack: "Vue, Vuetify",
-  },
-  {
-    title: "John Raptis",
-    source: "https://github.com/raptisj/johnraptis.dev/",
+    title: "johnraptis.dev",
+    link: "https://github.com/raptisj/johnraptis.dev/",
     description: "This website.",
-    stack: "Gatsby, Netlify",
+    state: "🏡",
   },
 ]

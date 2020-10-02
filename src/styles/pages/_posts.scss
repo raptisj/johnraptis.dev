@@ -6,7 +6,7 @@
 
   display: flex;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 0 16px;
 
   @include breakpoint(mobile) {
     display: grid;
@@ -58,6 +58,7 @@
 
 .latest__post {
   display: flex;
+  justify-content: space-between;
 
   a {
     display: block;
