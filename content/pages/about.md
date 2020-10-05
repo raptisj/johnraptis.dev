@@ -32,5 +32,7 @@ If you want to contact me and give me feedback or comment on something or to cor
 - **Currently reading:** Civilized to Death _by Christopher Ryan_
 - **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=UaZeTmFBbGc" target="_blank">Possibly The Most Dangerous Animal In The World
   </a>
+- **Made me think:** <a class="favourite-links" href="https://nesslabs.com/flexible-consistency" target="_blank">The power of flexible consistency
+  </a>
 
 <span class="caution-msg"> **Caution:** Frequent and unpredictable updates may apply </span>
