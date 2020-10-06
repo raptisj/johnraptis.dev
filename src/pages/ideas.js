@@ -13,7 +13,8 @@ const Blog = ({ data }) => {
     <Layout>
       <Helmet title={`Articles - John Raptis`} />
       <SEO title={title} description={description} />
-      <h1 className="main-title">Articles</h1>
+      <h1 className="main-title">Ideas</h1>
+      <p>Some thoughts on various topics. Tech or non-tech related.</p>
       <section className="posts__grid">
         {posts.map(({ node }) => {
           return (
@@ -40,12 +41,10 @@ export const pageQuery = graphql`
         description
       }
     }
+
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        fields: { slug: { nin: ["/learn-in-public-greek/"] } }
-        frontmatter: { category: { nin: ["ideas", "about"] } }
-      }
+      filter: { frontmatter: { category: { eq: "ideas" } } }
     ) {
       edges {
         node {

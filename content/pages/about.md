@@ -2,6 +2,7 @@
 title: About
 slug: about
 template: page
+category: about
 ---
 
 Hey hey!!

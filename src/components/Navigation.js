@@ -45,6 +45,7 @@ const Navigation = () => {
           <div className="nav__links">
             <Link to="/about">About</Link>
             <Link to="/blog">Articles</Link>
+            {/* <Link to="/ideas">Ideas</Link> */}
           </div>
 
           <div className="nav__social">

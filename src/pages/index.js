@@ -79,7 +79,8 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: {
-        fields: { slug: { nin: ["/about/", "/learn-in-public-greek/"] } }
+        fields: { slug: { nin: ["/learn-in-public-greek/"] } }
+        frontmatter: { category: { nin: ["ideas", "about"] } }
       }
       limit: 3
     ) {

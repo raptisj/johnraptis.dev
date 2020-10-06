@@ -10,6 +10,8 @@ h2,
 h3,
 h4 {
   font-family: "Nunito", sans-serif;
+  // font-family: "Ubuntu", sans-serif;
+  // font-weight: 500;
 }
 
 h2 {
@@ -17,7 +19,15 @@ h2 {
 }
 
 p,
-li,
+li {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.1rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.1rem;
+  }
+}
+
 code {
   font-family: "Maven Pro", sans-serif;
   font-size: 1.1rem;
