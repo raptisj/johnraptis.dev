@@ -13,7 +13,7 @@ I'm a self-taught developer who wrote his first line of code in the tender age o
 
 Other than code I like running mountains(and streets), playing and listening to music, reading and playing with Naval(my cat).
 
-If you want to contact me and give me feedback or comment on something or to correct me, please do so at <a href="#0">johnsitpar@gmail.com</a>(_yes. It's raptis backwards!!_)
+If you want to contact me and give me feedback or comment on something or correct me, please do so at <a href="#0">johnsitpar@gmail.com</a>(_yes. It's raptis backwards!!_)
 
 ##My Life in bullets
 
@@ -25,7 +25,8 @@ If you want to contact me and give me feedback or comment on something or to cor
 - **2013** Came back to Greece. Moved to Thessaloniki, where I took odd jobs to sustain myself. I stopped playing music completely. Musicians block I guess.
 - **2016**(_October_) Started coding for fun after watching a random tutorial(don’t ask how). I got hooked.
 - **2018**(_May_) Got my first job as web developer in an agency. I was working as a waiter in a restaurant at the time.
-- **2019**(_November_) Started working at [VisualEyes](https://www.visualeyes.design/)/[Loceye](https://www.loceye.io/) as a JavaScript Engineer.
+- **2019**(_November_) Worked at a startup as a JavaScript Engineer.
+- **2020**(_October_) Working at a large organization as a Front-end Engineer.
 
 ##As for now
 

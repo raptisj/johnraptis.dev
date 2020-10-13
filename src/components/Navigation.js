@@ -22,7 +22,7 @@ const Navigation = () => {
       setScrolled(false)
     }
     // console.log((window.scrollY / document.body.clientHeight) * 100)
-    const scrollPercentage = (window.scrollY / document.body.clientHeight) * 100
+    // const scrollPercentage = (window.scrollY / document.body.clientHeight) * 100
     const logoIcon = document.querySelector(".nav__brand a img")
 
     logoIcon.style.transform = `rotate(-${window.scrollY / 10}deg)`
