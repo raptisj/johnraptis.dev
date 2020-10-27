@@ -178,4 +178,4 @@ That was it.
 
 I think this is a good starter setup to get the gist of it all.
 
-Now of you go and make things.
+Now off you go and make things.

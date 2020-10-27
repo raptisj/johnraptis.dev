@@ -5,6 +5,10 @@
   grid-template-columns: 40px 1fr 4fr;
   align-items: center;
 
+  @include breakpoint(mobile) {
+    grid-template-rows: 1fr;
+  }
+
   &__state {
     font-size: 22px;
   }
@@ -27,6 +31,10 @@
 
   &__info {
     color: #727272;
+
+    @include breakpoint(mobile) {
+      grid-column: 1 / -1;
+    }
   }
 }
 
@@ -36,6 +44,10 @@
 
 .projects-status {
   display: flex;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
 
   p {
     margin: 0 16px 0 0;
