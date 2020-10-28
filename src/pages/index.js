@@ -19,11 +19,23 @@ const IndexPage = ({ data }) => {
       <section className="home">
         <div>
           <h1 className="main-title">Hi people!</h1>
-          <p>John here. This is my space.</p>
+          <p>John here.</p>
           <p>
-            I like writing about JavaScript, React and programming fundamentals.
-            If I can explain it, I sure understand a little something. Enjoy!!
+            I like writing about JavaScript, React and programming fundamentals in general.
+            If I can explain it, I sure understand a little something.
+             Enjoy!
           </p>
+
+          <a
+            className="newsletter-button"
+            href="https://johnraptis.substack.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Join newsletter
+          </a> 
+          <span>Ain't no spam here when you sub.</span>
+
         </div>
         <div className="home__image">
           <img src={meme} alt="John Raptis" />

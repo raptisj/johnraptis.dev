@@ -17,7 +17,7 @@
 .post__link:hover,
 .post__link:active,
 .post__link:focus {
-  border: 2px dashed #8b0000;
+  border-left: 2px dashed #8b0000;
   background: #f2f2f2;
 }
 
@@ -62,16 +62,17 @@
 
   a {
     display: block;
-    background: #8b0000;
-    padding: 0 0.5rem;
-    border-radius: 16px;
-    color: #f8f8f8;
+    background: #fff;
+    color: #8b0000;
+    padding: 0 0.7rem;
+    border-radius: 4px;
     border: 2px dashed #8b0000;
     margin-left: 8px;
+    font-weight: 600;
 
     &:hover {
-      background: #f2f2f2;
-      color: #8b0000;
+      background: #8b0000;
+      color: #fff;
     }
   }
 }

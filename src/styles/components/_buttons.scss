@@ -1,36 +1,58 @@
 .btn-link {
-	display: inline-block;
-	background: #8b0000;
-	padding: .4rem .9rem;
-	border-radius: 5px;
-	color: #f8f8f8;
-	margin-right: 20px;
-	// letter-spacing: 1px;
+  display: inline-block;
+  background: #8b0000;
+  padding: 0.4rem 0.9rem;
+  border-radius: 5px;
+  color: #f8f8f8;
+  margin-right: 20px;
+  // letter-spacing: 1px;
 }
 
 .btn-link:hover {
-	background: rgba(139, 0, 0, .9);
+  background: rgba(139, 0, 0, 0.9);
 }
 
 %projectsBtns {
-	background: transparent;
-	border-radius: 5px;
-	border: none;
-	border: 2px solid #8b0000;
-	color: #8b0000;
-	cursor: pointer;
-	padding: .4rem .9rem;
-	margin-right: 10px;
-	opacity: 0;
-	transition: all .3s;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #8b0000;
+  color: #8b0000;
+  cursor: pointer;
+  padding: 0.4rem 0.9rem;
+  margin-right: 10px;
+  opacity: 0;
+  transition: all 0.3s;
 
-	&:hover {
-		background: #8b0000;
-		color: #fff;
-		transition: all .3s;
-	}
+  &:hover {
+    background: #8b0000;
+    color: #fff;
+    transition: all 0.3s;
+  }
 }
 
-.source__btn, .demo__btn {
-	@extend %projectsBtns;
+.source__btn,
+.demo__btn {
+  @extend %projectsBtns;
+}
+
+.newsletter-button {
+  border: 2px dashed #8b0000;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+
+  &:hover {
+    background: #8b0000;
+    color: #fff;
+  }
+}
+
+.newsletter-button + span {
+  display: block;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #727272;
+  font-style: italic;
 }
