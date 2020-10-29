@@ -80,20 +80,21 @@ Here we are using a <span class="highlight-in-text">reduce</span> higher order f
 
 Eventually we want to have a <span class="highlight-in-text">posts</span> object that contains an <span class="highlight-in-text">byId</span> object of each post and an <span class="highlight-in-text">allIds</span> array with all the posts ids
 
-```java
+```javascript
 const normalizedPosts = posts.reduce((data, item) => {
-    data[item.id] = item;
-    return data;
- }, {})
+  data[item.id] = item
+  return data
+}, {})
 
 const postIds = posts.map(post => post.id)
 
-const state = {posts: {byId: normalizedPosts, allIds: postIds}}
+const state = { posts: { byId: normalizedPosts, allIds: postIds } }
 console.log(state)
 ```
 
+<div class="filename">output</div>
+
 ```jsx
-// state output
  {
 	posts: {
 		byId: {
@@ -129,27 +130,35 @@ Instead of looping an array we can access a specific post by id.
 
 ```jsx
 console.log(state.posts.byId[2])
+```
 
-// {
-//	id: "2",
-//	name: "name 2",
-//	body: "Lorem ipsum . . .",
-//	comments: [
-//		{id: "12", comment: "Lorem comment . . ."},
-//		{id: "13", comment: "Lorem comment . . ."},
-//		{id: "14", comment: "Lorem comment . . ."}
-//	],
-//	author: "Marry Doe",
-//	data: "2020-10-20"
-// },
+<div class="filename">output</div>
+
+```java
+ {
+	id: "2",
+	name: "name 2",
+	body: "Lorem ipsum . . .",
+	comments: [
+		{id: "12", comment: "Lorem comment . . ."},
+		{id: "13", comment: "Lorem comment . . ."},
+		{id: "14", comment: "Lorem comment . . ."}
+	],
+	author: "Marry Doe",
+	data: "2020-10-20"
+ },
 ```
 
 And if we want to access all posts we do it with the <span class="highlight-in-text">allIds</span> arrays.
 
-```java
+```javascript
 console.log(state.posts.allIds.map(id => state.posts.byId[id]))
+```
 
-// [{…}, {…}, {…}, {…}
+<div class="filename">output</div>
+
+```javascript
+[{…}, {…}, {…}, {…}]
 ```
 
 Notice that in each object of <span class="highlight-in-text">posts</span> we have a comments array. Wouldn't it be nice if that was normalized to?
@@ -174,6 +183,8 @@ console.log(normalizedPostsAndComments[2].comments[12])
 ```
 
 If we log it to console the output will look something like be this.
+
+<div class="filename">output</div>
 
 ```jsx
 "2" : {
@@ -226,8 +237,9 @@ const state = {
 console.log(state)
 ```
 
+<div class="filename">output</div>
+
 ```jsx
-// state output
  {
 	posts: {
 		byId: {
