@@ -31,7 +31,10 @@ If you want to contact me and give me feedback or comment on something or correc
 ##As for now
 
 - **Favorite song:** <a class="favourite-links" href="https://www.youtube.com/watch?v=iAvVQgvjeZ8" target="_blank">Alfa Mist - Galaxy</a>
-- **Currently reading:** Civilized to Death _by Christopher Ryan_
+- **Currently reading:** <br />
+  How to Fail at Almost Everything an Still Win Big _by Scott Adams_, <br />
+  How Innovation Works _by Matt Ridley_
+
 - **Recently Watched:** <a class="favourite-links" href="https://www.youtube.com/watch?v=UaZeTmFBbGc" target="_blank">Possibly The Most Dangerous Animal In The World
   </a>
 - **Made me think:** <a class="favourite-links" href="https://nesslabs.com/flexible-consistency" target="_blank">The power of flexible consistency
