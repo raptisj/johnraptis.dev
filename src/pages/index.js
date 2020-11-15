@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
 
       <section className="section home-projects">
         <h2>Projects</h2>
-        <p>Some projects I'm working on. Tweaks are being made all the time.</p>
+        <p>Some projects I'm working on.</p>
         <Projects projects={projects} />
         <div className="projects-status">
           <p>

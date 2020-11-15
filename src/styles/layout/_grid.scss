@@ -69,18 +69,23 @@
     justify-self: end;
     display: flex;
     transform: perspective(1500px) rotateY(-15deg) rotateZ(3deg);
+    filter: grayscale(100%);
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    transition: transform 0.6s ease 0s;
+    transition: all 3s ease 0s;
 
     &:hover {
       transform: perspective(3000px) rotateY(5deg);
+      transition: all 3s;
+      filter: grayscale(0%);
     }
 
     @include breakpoint(mobile) {
       justify-self: start;
       grid-row: 1;
       margin-top: 40px;
+      transform: perspective(0) rotateY(0deg) rotateZ(0deg);
+      filter: grayscale(0%);
     }
 
     img {
@@ -135,6 +140,16 @@
     &:hover {
       border-bottom: 2px solid #8b0000;
     }
+  }
+}
+
+//bio
+.bio__container {
+  display: flex;
+  padding-bottom: 42px;
+
+  &--content {
+    margin: 0 0 0 32px;
   }
 }
 

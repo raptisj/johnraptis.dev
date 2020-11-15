@@ -1,8 +1,8 @@
 :root {
-	--css-color: #b70909;
-	--javascript-color: #5f9ea0;
-	--workflow-color: #b8860b;
-	--design-color: #f7ac22;
+  --css-color: #b70909;
+  --javascript-color: #5f9ea0;
+  --workflow-color: #b8860b;
+  --design-color: #f7ac22;
 }
 
 // breakpoints for mixin
@@ -11,6 +11,8 @@ $mobile: 650px;
 // Body font
 $font-size: 1rem;
 $mainTitleColor: #333333;
+$brandColor: #8b0000;
+$hoverBrandColor: #710000;
 $customRed: #8b0000;
 $body-font-size: 1.15rem;
 $font-style: normal;
@@ -18,11 +20,9 @@ $font-variant: normal;
 $font-weight: normal;
 $font-color: #404040;
 $light-font-color: rgba(0, 0, 0, 0.6);
-$font-family: -apple-system, BlinkMacSystemFont, 'Roboto', Helvetica Neue, Helvetica, Arial,
-  sans-serif;
+$font-family: -apple-system, BlinkMacSystemFont, "Roboto", Helvetica Neue,
+  Helvetica, Arial, sans-serif;
 $line-height: 1.6;
-
-
 
 $border-width: 2px;
 $border-style: solid;
@@ -36,7 +36,6 @@ $code-size: 15px;
 $code-family: Nunito, monospace;
 $code-background: transparent;
 $code-borders: $borders;
-
 
 $code-font-family: monospace;
 $code-font-color: #b3b9c5;

@@ -25,7 +25,7 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   return (
-    <div>
+    <div className="bio__container">
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
@@ -38,16 +38,29 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
+      <div className="bio__container--content">
       <p>
-        Written by <strong>{author}</strong>.
         <br />
         In love with JavaScript, React and programming fundamentals in general.
         {` `}
         <br />
         <a href={`https://twitter.com/${social.twitter}`} target="_blank">
-          Follow me on Twitter
+          Me on Twitters
         </a>
       </p>
+
+        <hr />
+        <br />
+        <a
+          className="newsletter-button"
+          href="https://johnraptis.substack.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Join newsletter
+        </a> 
+        <span>Ain't no spam here when you sub.</span>
+      </div>
     </div>
   )
 }

@@ -4,7 +4,6 @@
   position: fixed;
   top: 0;
   z-index: 3;
-  background: #ffffff;
   transition: height 0.3s ease;
 
   &::after {
@@ -13,13 +12,17 @@
     left: 0;
     height: 2px;
     width: 100%;
-    border-bottom: 2px dashed #8b0000;
   }
 }
 
 .scrolled {
   height: 58px;
   transition: height 0.3s ease;
+
+  .nav__container {
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .nav__container {
