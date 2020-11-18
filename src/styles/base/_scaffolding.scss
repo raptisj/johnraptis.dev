@@ -10,18 +10,22 @@ h2,
 h3,
 h4 {
   font-family: "Nunito", sans-serif;
+  color: var(--title-color);
+
   // font-family: "Ubuntu", sans-serif;
   // font-weight: 500;
 }
 
 h2 {
   font-size: 1.7rem;
+  color: var(--title-color);
 }
 
 p,
 li {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.1rem;
+  color: var(--text-color);
 
   @include breakpoint(mobile) {
     font-size: 1.1rem;
@@ -39,7 +43,7 @@ code {
 
 ::selection {
   color: #f8f8f8;
-  background: #8b0000;
+  background: var(--brand-color);
 }
 
 ul {
@@ -62,19 +66,19 @@ li {
 
 a {
   text-decoration: none;
-  color: #8b0000;
+  color: var(--brand-color);
   font-weight: 500;
   box-shadow: none;
 }
 
 blockquote {
-  background: #f5f5dc;
+  background: var(--bg-blockquote);
   padding: 1rem;
-  border-left: 8px solid #efa547;
+  border-left: 8px solid var(--border-blockquote);
 }
 
 .highlight-in-text {
-  background: #f5f5dc;
+  background: var(--highlight-text);
   padding: 4px;
   border-radius: 3px;
 }
@@ -91,19 +95,13 @@ mark {
 }
 
 .caution-msg {
-  background: #8b000040;
+  background: var(--brand-color-opacity);
   padding: 5px;
 }
 
 .latest-posts {
   padding-bottom: 4rem;
   padding-top: 5.5rem;
-}
-
-.subhead {
-  margin-bottom: 30px;
-  color: #333333;
-  font-size: 1.5rem;
 }
 
 .articles-head {
@@ -114,8 +112,8 @@ mark {
   }
 }
 
-.favourite-links {
+.favorite-links {
   &:hover {
-    border-bottom: 2px solid #8b0000;
+    border-bottom: 2px solid var(--brand-color);
   }
 }

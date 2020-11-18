@@ -4,7 +4,8 @@
   position: fixed;
   top: 0;
   z-index: 3;
-  transition: height 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent;
 
   &::after {
     content: "";
@@ -17,11 +18,11 @@
 
 .scrolled {
   height: 58px;
-  transition: height 0.3s ease;
+  transition: all 0.3s ease;
 
   .nav__container {
     backdrop-filter: blur(3px);
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--nav-bg-opacity);
   }
 }
 
@@ -46,7 +47,7 @@
 .nav__brand a,
 .nav__links a,
 .nav__social a {
-  color: #444444;
+  color: var(--nav-links);
   font-size: 1.1rem;
   padding: 7px;
   font-weight: 600;
@@ -73,12 +74,26 @@
 
 .nav__brand a:hover,
 .nav__links a:hover {
-  color: #8b0000;
+  color: var(--brand-color);
+}
+
+.nav__theme-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+    margin: 0 4px 0 0;
+  }
 }
 
 .nav__social {
   align-self: center;
   justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
 }
 
 .nav__social-icons {
@@ -88,5 +103,5 @@
 }
 
 .nav__social a:hover {
-  background: rgba(139, 0, 0, 0.1);
+  background: var(--hover-nav-links-opacity);
 }

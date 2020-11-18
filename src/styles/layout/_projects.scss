@@ -20,7 +20,7 @@
 
     h3 {
       display: block;
-      color: $mainTitleColor;
+      color: var(--title-color);
       font-size: 1.1rem;
       font-weight: 600;
       margin: 0;
@@ -60,10 +60,10 @@
 }
 
 .project:hover {
-  background: #f2f2f2;
+  background: var(--hover-links);
 
   h3 {
-    color: #8b0000;
+    color: var(--brand-color);
   }
 }
 

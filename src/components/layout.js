@@ -1,26 +1,38 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Navigation from "./Navigation"
 import "../styles/main.scss"
+import sun from '../../content/assets/sun.svg'
+import moon from '../../content/assets/moon.svg'
 
-class Layout extends React.Component {
-  render() {
-    const { children } = this.props
+const Layout = ({children}) => {  
+  const theme = typeof window !== 'undefined' && localStorage.getItem('theme')
+  const [isDark, setIdDark] = useState(theme !== null && theme === "dark")
+  
 
-    return (
+  if(theme === null) {
+    localStorage.setItem('theme', 'dark');
+    setIdDark(true)
+  } 
+  
+  const changeTheme = () => {
+    !isDark ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
+    setIdDark(!isDark)
+  }
+
+  return (
+    <div className={isDark ? "dark" : "light"}>
+      <Navigation changeTheme={changeTheme} icon={isDark ? sun : moon} />
       <div>
-        <Navigation />
-        <div>
-          <div className="container">
-            <main className="container__inner">{children}</main>
-          </div>
+        <div className="container">
+          <main className="container__inner">{children}</main>
         </div>
-        <footer className="footer">
+      </div>
+      <footer className="footer">
           © {new Date().getFullYear()}, John Raptis
           {` `}
-        </footer>
-      </div>
-    )
-  }
+      </footer>
+    </div>
+  )
 }
 
 export default Layout

@@ -4,7 +4,7 @@ import github from "../../content/assets/github-icon.svg"
 import twitter from "../../content/assets/twitter-icon.svg"
 import favicon from "../../content/assets/favicon.png"
 
-const Navigation = () => {
+const Navigation = ({changeTheme, icon}) => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -21,8 +21,7 @@ const Navigation = () => {
     } else {
       setScrolled(false)
     }
-    // console.log((window.scrollY / document.body.clientHeight) * 100)
-    // const scrollPercentage = (window.scrollY / document.body.clientHeight) * 100
+
     const logoIcon = document.querySelector(".nav__brand a img")
 
     logoIcon.style.transform = `rotate(-${window.scrollY / 10}deg)`
@@ -48,7 +47,11 @@ const Navigation = () => {
             {/* <Link to="/ideas">Ideas</Link> */}
           </div>
 
+
           <div className="nav__social">
+            <div onClick={() => changeTheme()} className="nav__theme-icon">
+              <img src={icon} />
+            </div>
             <a
               href="https://twitter.com/JohnRaptisM"
               target="_blank"
