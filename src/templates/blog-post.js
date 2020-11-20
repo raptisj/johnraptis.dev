@@ -11,7 +11,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { title, description, date, thumb, updated } = post.frontmatter
+    const { title, description, date, thumb, updated, tag } = post.frontmatter
     const { html, timeToRead } = post
 
     return (

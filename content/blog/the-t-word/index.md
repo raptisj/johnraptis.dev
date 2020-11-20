@@ -1,9 +1,10 @@
 ---
-title: The 't' word(this) in Javascript
+title: The 'this' word in Javascript
 date: 2019-07-26
-description: this
+description: Understand what this means in JavaScript
 template: post
 thumb: ../../assets/javascript-logo.png
+tags: ["javascript"]
 ---
 
 Many people have issues when it comes to understand the <span class="highlight-in-text">'this'</span> keyword. What it does and when should I use it are common questions.

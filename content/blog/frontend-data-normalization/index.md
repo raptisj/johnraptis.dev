@@ -4,6 +4,7 @@ date: 2020-10-29
 description: Simplify your complex data structures
 template: post
 thumb: ../../assets/javascript-logo.png
+tags: ["javascript"]
 ---
 
 Many times in our applications we are dealing with complex state that contains deep nesting. This makes it difficult to work with since we have to make many manipulations to present our data the way we want. What we commonly do is normalize our data.

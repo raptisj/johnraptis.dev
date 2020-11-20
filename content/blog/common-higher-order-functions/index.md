@@ -4,6 +4,7 @@ date: 2019-09-23
 description: Using map, filter and reduce
 template: post
 thumb: ../../assets/javascript-logo.png
+tags: ["javascript"]
 ---
 
 Common higher order functions(HOF) are map, filter and reduce amongst others and these are the one's we are going to see in this tutorial.

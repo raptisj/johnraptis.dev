@@ -1,3 +1,10 @@
+.posts__grid {
+  padding-top: 100px;
+  @include breakpoint(mobile) {
+    padding-top: 60px;
+  }
+}
+
 .post__link {
   display: flex;
   justify-content: space-between;
@@ -15,7 +22,7 @@
   background: var(--hover-links);
 }
 
-.post__link span {
+.post__link > div > span {
   color: #727272;
   white-space: nowrap;
   font-size: 0.9rem;
@@ -43,10 +50,18 @@
   }
 }
 
-.posts__grid {
-  padding-top: 100px;
-  @include breakpoint(mobile) {
-    padding-top: 60px;
+.post__info {
+  display: flex;
+}
+
+.post__tags {
+  margin: auto;
+
+  span {
+    background: var(--tags-bg);
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin: 0 3px;
   }
 }
 
@@ -68,4 +83,47 @@
       color: #fff;
     }
   }
+}
+
+.tags-list {
+  margin-top: 32px;
+
+  span {
+    background: var(--tags-bg);
+    padding: 6px 8px;
+    border-radius: 4px;
+    margin: 0 3px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    &:hover {
+      background: var(--brand-color);
+      color: #fff;
+    }
+  }
+}
+
+[data-value] {
+  color: var(--brand-color);
+}
+
+[data-value="javascript"] {
+  color: var(--brand-color);
+}
+
+[data-value="react"] {
+  color: var(--brand-color);
+}
+
+[data-value="redux"] {
+  color: var(--brand-color);
+}
+
+[data-value="tooling"] {
+  color: var(--brand-color);
+}
+
+[data-value="css"] {
+  color: var(--brand-color);
 }

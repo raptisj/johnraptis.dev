@@ -5,6 +5,7 @@ description: The simplest Rollup boilerplate.
 template: post
 thumb: ../../assets/rollup-logo2.png
 updated: 2020-08-21
+tags: ["javascript", "tooling"]
 ---
 
 In this article I'm going to walk you through the process of creating the simplest boilerplate environment there is, so you can publish your own React components to NPM. We will use [Rollup](https://rollupjs.org/guide/en/) to achieve this.

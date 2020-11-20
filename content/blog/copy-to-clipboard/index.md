@@ -3,6 +3,7 @@ title: Copy to Clipboard
 date: 2019-11-10
 template: post
 thumb: ../../assets/javascript-logo.png
+tags: ["javascript"]
 ---
 
 The other day I was trying to copy an element's value to the clipboard. I found out there was no straight forward way to do this with elements other than input and textarea. So how do we do it?

@@ -4,6 +4,7 @@ date: 2019-09-10
 description: Leverage the pover of mixins
 template: post
 thumb: ../../assets/sass-logo.png
+tags: ["css"]
 ---
 
 To be honest I used to not understand containers and breakpoints. I know it seems simple enough but I simply couldn't wrap my head around them. Let alone figuring out a decent workflow. So let's figure out a way, on how to use media queries more efficiently than the traditional way.

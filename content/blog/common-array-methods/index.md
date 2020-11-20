@@ -4,6 +4,7 @@ date: 2019-09-26
 description: Using push, pop, find and more
 template: post
 thumb: ../../assets/javascript-logo.png
+tags: ["javascript"]
 ---
 
 In this article we are going to see some more array methods like concat, push, slice, splice, find and more.

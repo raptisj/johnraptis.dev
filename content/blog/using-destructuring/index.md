@@ -4,6 +4,7 @@ date: 2020-08-27
 description: Harness the power of ES6.
 template: post
 thumb: ../../assets/javascript-logo.png
+tags: ["javascript"]
 ---
 
 Since ES6(ES2015 Edition) was introduce to the JavaScript language, we get to use some cool features when working with arrays and objects. One of them is destructuring. With destructuring we can assign items from an array or object properties as variables.

@@ -4,6 +4,7 @@ date: 2019-08-06T20:39:09.141Z
 description: It's all over the internet.. so why not
 template: post
 thumb: ../../assets/react.png
+tags: ["react"]
 ---
 
 Darkmode is a small little feature that is pretty common these days. Now I'm not writing this article on why it's cool but I think this is a nice opportunity to learn some concepts that come with this. And it's actually the first example that I came across and made me understand how the React Context API works. First we will do this using Class components and then we will move to functional ones using Hooks.

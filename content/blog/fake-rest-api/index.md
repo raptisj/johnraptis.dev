@@ -4,6 +4,7 @@ date: 2020-01-31T20:39:09.141Z
 description: Add custom routes and generate data
 template: post
 thumb: ../../assets/database.png
+tags: ["tooling"]
 ---
 
 Many times as developers we want a quick back-end to fetch data from. Instead of a real API we just want to have some fake data to play with. Whatever the reason is, a fake API comes in handy during development.

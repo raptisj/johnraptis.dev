@@ -5,6 +5,7 @@ description: The state managment tool that people love to hate
 template: post
 thumb: ../../assets/redux-logo.jpg
 updated: 2020-08-25
+tags: ["react", "redux"]
 ---
 
 _**Update**: I highly recommend checking out [this](https://www.johnraptis.dev/redux-toolkit/) article showing you how you can do all this with [Redux Toolkit](https://redux-toolkit.js.org/). It simplifies a lot of stuff and removes a lot of the boilerplate._
