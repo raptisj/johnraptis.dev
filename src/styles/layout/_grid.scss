@@ -147,9 +147,18 @@
 .bio__container {
   display: flex;
   padding-bottom: 42px;
+  flex-wrap: wrap;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
 
   &--content {
     margin: 0 0 0 32px;
+
+    @include breakpoint(mobile) {
+      margin: 0;
+    }
   }
 }
 
