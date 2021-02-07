@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react"
 import { Link } from "gatsby"
-import github from "../../content/assets/github-icon.svg"
-import twitter from "../../content/assets/twitter-icon.svg"
 import favicon from "../../content/assets/favicon.png"
 
 const Navigation = ({changeTheme, icon}) => {
@@ -41,33 +39,14 @@ const Navigation = ({changeTheme, icon}) => {
             </Link>
           </div>
 
-          <div className="nav__links">
-            <Link to="/about">About</Link>
-            <Link to="/blog">Articles</Link>
-            {/* <Link to="/ideas">Ideas</Link> */}
-          </div>
-
-
           <div className="nav__social">
+          <Link to="/about">About</Link>
+            <Link to="/blog">Articles</Link>
+            <a href="https://garden.johnraptis.dev/" target="_blank">Garden</a>
+
             <div onClick={() => changeTheme()} className="nav__theme-icon">
               <img src={icon} />
             </div>
-            <a
-              href="https://twitter.com/JohnRaptisM"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="twitter"
-            >
-              <img src={twitter} className="nav__social-icons" alt="twitter" />
-            </a>
-            <a
-              href="https://github.com/raptisj"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="github"
-            >
-              <img src={github} className="nav__social-icons" alt="github" />
-            </a>
           </div>
         </div>
       </nav>

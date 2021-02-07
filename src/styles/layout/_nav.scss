@@ -31,8 +31,12 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding: 0 10px;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: auto 1fr;
+  }
 }
 
 .nav__brand {
@@ -49,8 +53,12 @@
 .nav__social a {
   color: var(--nav-links);
   font-size: 1.1rem;
-  padding: 7px;
+  padding: 7px 14px;
   font-weight: 600;
+
+  @include breakpoint(mobile) {
+    padding: 7px;
+  }
 }
 
 .nav__brand a {
@@ -91,8 +99,8 @@
 .nav__social {
   align-self: center;
   justify-self: end;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
+  // grid-template-columns: repeat(3, auto);
   align-items: center;
 }
 

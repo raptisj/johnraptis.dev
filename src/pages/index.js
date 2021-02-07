@@ -7,6 +7,8 @@ import projects from "../../data/projects"
 import { Link, graphql } from "gatsby"
 import Image from "gatsby-image"
 import meme from "../../content/assets/meme.png"
+import github from "../../content/assets/github-icon.svg"
+import twitter from "../../content/assets/twitter-icon.svg"
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -21,21 +23,46 @@ const IndexPage = ({ data }) => {
           <h1 className="main-title">Hi people!</h1>
           <p>John here.</p>
           <p>
-            I like writing about JavaScript, React and programming fundamentals in general.
-            If I can explain it, I sure understand a little something.
-             Enjoy!
+            I like writing about JavaScript, React and programming fundamentals
+            in general. If I can explain it, I sure understand a little
+            something. Enjoy!
           </p>
 
-          <a
-            className="newsletter-button"
-            href="https://johnraptis.substack.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Join newsletter
-          </a> 
-          <span>Ain't no spam here when you sub.</span>
-
+          <div className="social-container">
+            <div>
+              <a
+                className="newsletter-button"
+                href="https://johnraptis.substack.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Join newsletter
+              </a>
+              <span>Ain't no spam here when you sub.</span>
+            </div>
+            <div className="social-icons">
+              <a
+                href="https://twitter.com/JohnRaptisM"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="twitter"
+              >
+                <img
+                  src={twitter}
+                  className="nav__social-icons"
+                  alt="twitter"
+                />
+              </a>
+              <a
+                href="https://github.com/raptisj"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="github"
+              >
+                <img src={github} className="nav__social-icons" alt="github" />
+              </a>
+            </div>
+          </div>
         </div>
         <div className="home__image">
           <img src={meme} alt="John Raptis" />

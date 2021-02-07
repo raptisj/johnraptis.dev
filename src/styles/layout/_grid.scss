@@ -162,6 +162,20 @@
   }
 }
 
+.social-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.social-icons a {
+  margin-right: 8px;
+  padding: 8px;
+
+  &:hover {
+    background: var(--brand-color-opacity);
+  }
+}
+
 // footer
 .footer {
   text-align: center;
