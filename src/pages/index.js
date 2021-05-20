@@ -97,6 +97,9 @@ const IndexPage = ({ data }) => {
             🛠️ <span>Work in progress</span>
           </p>
           <p>
+            💡 <span>Kinda complete</span>
+          </p>
+          <p>
             🏡 <span>This website</span>
           </p>
         </div>

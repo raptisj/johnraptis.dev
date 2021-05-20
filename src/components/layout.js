@@ -4,16 +4,16 @@ import "../styles/main.scss"
 import sun from '../../content/assets/sun.svg'
 import moon from '../../content/assets/moon.svg'
 
-const Layout = ({children}) => {  
+const Layout = ({ children }) => {
   const theme = typeof window !== 'undefined' && localStorage.getItem('theme')
   const [isDark, setIdDark] = useState(theme !== null && theme === "dark")
-  
 
-  if(theme === null) {
+
+  if (theme === null) {
     localStorage.setItem('theme', 'dark');
     setIdDark(true)
-  } 
-  
+  }
+
   const changeTheme = () => {
     !isDark ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
     setIdDark(!isDark)
@@ -28,7 +28,7 @@ const Layout = ({children}) => {
         </div>
       </div>
       <footer className="footer">
-          © {new Date().getFullYear()}, John Raptis
+        © {new Date().getFullYear()}, John Raptis
           {` `}
       </footer>
     </div>
