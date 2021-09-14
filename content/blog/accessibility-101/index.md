@@ -9,7 +9,7 @@ tags: ["tooling"]
 
 A couple of weeks ago I knew close to nothing about accessibility. I had a rudimentary sense of what it means but past that nothing applicable. I'm still miles away from any kind of mastery but here is some cool stuff I learned that will give you an introduction and a way to start making your website more accessible. Being aware of accessibility will make each one of us a more thoughtful developer.
 
-With the web invading every facet of our life, accessibility(also known as **a16y**) becomes even more important to be aware of. Although this is not a new concept, — Web Content Accessibility Guidelines(**WCAG**) were first published way back in 1999 — a lot of people are only now learning about it.
+With the web invading every facet of our life, accessibility(also known as **a11y**) becomes even more important to be aware of. Although this is not a new concept, — Web Content Accessibility Guidelines(**WCAG**) were first published way back in 1999 — a lot of people are only now learning about it.
 
 ## So what is web accessibility?
 
