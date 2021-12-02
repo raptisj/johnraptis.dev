@@ -1,38 +1,6 @@
-.post-title {
-  padding-bottom: 50px;
-  h1 {
-    margin: 0;
-    padding: 40px 0 0 0;
-    font-size: 2.4rem;
-    color: var(--title-color);
+// TODO: add font-sizes in variables and define
 
-    @include breakpoint(mobile) {
-      font-size: 1.9rem;
-    }
-  }
-
-  p {
-    display: inline-block;
-  }
-
-  span {
-    background: #f5f5dc;
-    padding: 2px 5px;
-    margin-left: 8px;
-  }
-
-  span + p {
-    font-style: italic;
-    margin-left: 8px;
-  }
-}
-
-.post-thumbnail {
-  max-width: 150px;
-  max-height: 150px;
-}
-
-.post {
+.single-post {
   section {
     a {
       &:hover {
@@ -59,5 +27,42 @@
 
   section {
     padding-bottom: 50px;
+  }
+
+
+  &__title {
+    padding-bottom: 50px;
+  
+    h1 {
+      margin: 0;
+      padding: 40px 0 8px 0;
+      font-size: $heading-1;
+      color: var(--title-color);
+  
+      @include breakpoint(mobile) {
+        font-size: $mobile-heading-1;
+      }
+    }
+  
+    p {
+      display: inline-block;
+      margin: 0;
+    }
+  
+    span {
+      background: #f5f5dc;
+      padding: 2px 5px;
+      margin-left: 8px;
+    }
+  
+    span + p {
+      font-style: italic;
+      margin-left: 8px;
+    }
+  }
+
+  &__thumbnail {
+    max-width: 150px;
+    max-height: 150px;
   }
 }

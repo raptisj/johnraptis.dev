@@ -1,15 +1,25 @@
-:root {
-  --css-color: #b70909;
-  --javascript-color: #5f9ea0;
-  --workflow-color: #b8860b;
-  --design-color: #f7ac22;
-}
+// :root {
+  // --css-color: #b70909;
+  // --javascript-color: #5f9ea0;
+  // --workflow-color: #b8860b;
+  // --design-color: #f7ac22;
+// }
 
 // breakpoints for mixin
 $mobile: 650px;
 
-// Body font
+// Typography
 $font-size: 1rem;
+$text-font-size: 1.1rem;
+
+// Heading Typography
+$heading-1: 3rem;
+$heading-2: 2rem;
+$heading-3: 1.7rem;
+$mobile-heading-1: 2.4rem;
+$mobile-heading-2: 1.7rem;
+$mobile-heading-3: 1.5rem;
+
 $mainTitleColor: #333333;
 $brandColor: #8b0000;
 $hoverBrandColor: #710000;
@@ -71,8 +81,9 @@ $error: #f2777a;
   --footer-text: hsla(0, 0%, 0%, 0.8);
   --bg-blockquote: #f5f5dc;
   --border-blockquote: #efa547;
-  --highlight-text: #f5f5dc;
+  --highlight-text-bg: #f5f5dc;
   --tags-bg: #e8e5e5;
+  --blockcode-bg: #f5f5dc;
 }
 
 .dark {
@@ -93,8 +104,9 @@ $error: #f2777a;
   --footer-text: #c7c7c7;
   --bg-blockquote: #191917;
   --border-blockquote: #389696;
-  --highlight-text: #414141;
+  --highlight-text-bg: #414141;
   --tags-bg: #111;
+  --blockcode-bg: #414141;
 }
 
 // --nav-bg-opacity: rgba(199, 199, 199, 0.6);

@@ -1,10 +1,10 @@
 export default [
-  {
-    title: "SpreadVote",
-    link: "https://github.com/raptisj/spread-vote-frontend",
-    description: "A petition app for voting guests for your favorite podcasts.",
-    state: "🛠️",
-  },
+  // {
+  //   title: "SpreadVote",
+  //   link: "https://github.com/raptisj/spread-vote-frontend",
+  //   description: "A petition app for voting guests for your favorite podcasts.",
+  // state: "🛠️",
+  // },
   {
     title: "Book Droplets",
     link: "https://github.com/raptisj/book-droplets",

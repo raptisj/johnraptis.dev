@@ -67,37 +67,24 @@
   &__image {
     align-self: center;
     justify-self: end;
-    display: flex;
-    transform: perspective(1500px) rotateY(-15deg) rotateZ(3deg);
-    filter: grayscale(100%);
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    transition: all 3s ease 0s;
-
-    &:hover {
-      transform: perspective(3000px) rotateY(5deg);
-      transition: all 3s;
-      filter: grayscale(0%);
-    }
-
+    background: #414141;
+    padding: 8px;
+    border-radius: 10px;
+    max-width: 230px;
+    max-height: 230px;
+   
     @include breakpoint(mobile) {
+      max-width: 170px;
+      max-height: 170px;
       justify-self: start;
       grid-row: 1;
-      margin-top: 40px;
-      transform: perspective(0) rotateY(0deg) rotateZ(0deg);
-      filter: grayscale(0%);
+      margin-top: 24px;
+      margin-bottom: 16px;
     }
 
     img {
-      max-width: 220px;
-      max-height: 220px;
       border-radius: 10px;
       margin: 0;
-
-      @include breakpoint(mobile) {
-        max-width: 170px;
-        max-height: 170px;
-      }
     }
   }
 }

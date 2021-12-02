@@ -5,8 +5,7 @@ import Helmet from "react-helmet"
 import Projects from "../components/Projects"
 import projects from "../../data/projects"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
-import meme from "../../content/assets/meme.png"
+import meme from "../../content/assets/me.jpeg"
 import github from "../../content/assets/github-icon.svg"
 import twitter from "../../content/assets/twitter-icon.svg"
 
@@ -124,7 +123,7 @@ export const pageQuery = graphql`
         fields: { slug: { nin: ["/learn-in-public-greek/"] } }
         frontmatter: { category: { nin: ["ideas", "about"] } }
       }
-      limit: 3
+      limit: 5
     ) {
       edges {
         node {

@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/meme.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/me.jpeg/" }) {
         childImageSharp {
           fixed(width: 100, height: 100) {
             ...GatsbyImageSharpFixed
@@ -39,15 +39,15 @@ const Bio = () => {
         }}
       />
       <div className="bio__container--content">
-      <p>
-        <br />
-        In love with JavaScript, React and programming fundamentals in general.
-        {` `}
-        <br />
-        <a href={`https://twitter.com/${social.twitter}`} target="_blank">
-          Me on Twitters
-        </a>
-      </p>
+        <p>
+          <br />
+          In love with JavaScript, React and programming fundamentals in general.
+          {` `}
+          <br />
+          <a href={`https://twitter.com/${social.twitter}`} target="_blank">
+            Me on Twitters
+          </a>
+        </p>
 
         <hr />
         <br />
@@ -58,7 +58,7 @@ const Bio = () => {
           rel="noreferrer"
         >
           Join newsletter
-        </a> 
+        </a>
         <span>Ain't no spam here when you sub.</span>
       </div>
     </div>

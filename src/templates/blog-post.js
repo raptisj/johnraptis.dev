@@ -7,46 +7,44 @@ import SEO from "../components/seo"
 import Helmet from "react-helmet"
 import Img from "gatsby-image"
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { title, description, date, thumb, updated, tag } = post.frontmatter
-    const { html, timeToRead } = post
+const BlogPostTemplate = ({ data, location }) => {
+  const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata.title
+  const { title, description, date, thumb, updated, tag } = post.frontmatter
+  const { html, timeToRead } = post
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <Helmet title={`${title} - John Raptis`} />
-        <SEO
-          title={title}
-          description={description || post.excerpt}
-          thumbnail={thumb}
-        />
+  return (
+    <Layout location={location} title={siteTitle}>
+      <Helmet title={`${title} - John Raptis`} />
+      <SEO
+        title={title}
+        description={description || post.excerpt}
+        thumbnail={thumb}
+      />
 
-        <article className="post">
-          <header className="post-title">
-            {thumb && (
-              <Img
-                fixed={thumb.childImageSharp.fixed}
-                className="post-thumbnail"
-              />
-            )}
-            <h1>{title}</h1>
-            <p>{date}</p>
-            <span> {timeToRead} min read</span>
-            {updated && <p>Updated: {updated}</p>}
-          </header>
+      <article className="single-post">
+        <header className="single-post__title">
+          {thumb && (
+            <Img
+              fixed={thumb.childImageSharp.fixed}
+              className="single-post__thumbnail"
+            />
+          )}
+          <h1>{title}</h1>
+          <p>{date}</p>
+          <span> {timeToRead} min read</span>
+          {updated && <p>Updated: {updated}</p>}
+        </header>
 
-          <section dangerouslySetInnerHTML={{ __html: html }} />
-          <hr />
+        <section dangerouslySetInnerHTML={{ __html: html }} />
+        <hr />
 
-          <footer>
-            <Bio />
-          </footer>
-        </article>
-      </Layout>
-    )
-  }
+        <footer>
+          <Bio />
+        </footer>
+      </article>
+    </Layout>
+  )
 }
 
 export default BlogPostTemplate
