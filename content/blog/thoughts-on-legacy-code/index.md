@@ -61,7 +61,13 @@ A piece of code might work but it is really dead if you can't extend it. Sure it
 
 You really don't want to end up in a situation wherein order to add a new feature, you have to make changes and preserve code that is based on old practices or technologies you no longer support just to fill a business need.
 
-Usually, when you write new stuff they will depend on some legacy system, depending on the size. The larger the size of the codebase, the more challenging it will be to fix if systems are not isolated from each other. That is why having code that is tightly coupled is considered a bad idea.
+Usually, when you write new stuff they will depend on some legacy system, depending on the size. The larger the size of the codebase, the more challenging it will be to fix if systems are not isolated from each other. That is why having code that is tightly coupled is considered a bad idea. The more the coupling, the more the complexity.
+
+Swyx has a great read on how we should [optimize for change](https://dev.to/swyx/how-to-optimize-for-change-a2n) and gave great insights on how we should design our abstractions and anything we code with that in mind. And the reason for this is to solve the _requirements volatility problem_, where changes in the specs of our product happen all the time whether we like it or not. We don't prepare ourselves for this kind of scenario so when a requirement changes it finds us unprepared so we write a "temporary" implementation. This usually doesn't happen just once, so all the previous hacks pile up and cause our codebase to mummify. Once all this sloppiness established itself it becomes increasingly hard to get rid of.
+
+> Hard-to-delete code drives out easy-to-delete code over time
+
+So optimizing your code for change and making it easier to delete, ironically makes it easier to extend in time and you will not produce legacy code _today_.
 
 ## Practical Implementation
 
