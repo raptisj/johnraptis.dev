@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Helmet from "react-helmet"
@@ -13,6 +13,25 @@ import { getDifferenceInDays } from '../utils'
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   const { title, description } = data.site.siteMetadata
+  const [isHovered, setIsHovered] = useState(false)
+  // TODO: Count each tag and sort accordingly
+  const allTags = [...new Set(data.all.edges.map(p => p.node.frontmatter.tags.flat()).flat())];
+
+  useEffect(() => {
+    const seeMoreLink = document.querySelector('#see-more-post')
+    seeMoreLink.addEventListener('mouseenter', () => {
+      setIsHovered(true)
+    })
+
+    seeMoreLink.addEventListener('mouseleave', () => {
+      setIsHovered(false)
+    })
+
+  }, [isHovered])
+
+  const msg = !isHovered
+    ? ` <code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">seeMoreOn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation"> . . . }</span></code>`
+    : `<code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">seeMoreOn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token function-variable function">${allTags.join(', ')} . . . </span><span class="token punctuation">}</span></code>`
 
   return (
     <Layout>
@@ -65,10 +84,10 @@ const IndexPage = ({ data }) => {
             <span className="newsletter-button__subtitle">Ain't no spam here when you sub.</span>
           </div>
         </div>
-        <div className="home__image">
+        <Link to="/about" className="home__image">
           <img src={meme} alt="John Raptis" />
           <div />
-        </div>
+        </Link>
       </section>
 
       <section className="posts__grid">
@@ -91,8 +110,11 @@ const IndexPage = ({ data }) => {
           )
         })}
         <div>
-          <Link to="/blog" className="see-more-posts__link">
-            <h3 className="post__title">See more +</h3>
+          <Link to="/blog" className="see-more-posts__link" id="see-more-post">
+            <div dangerouslySetInnerHTML={{
+              __html: msg
+            }} />
+            {/* <h3 className="post__title">See more +</h3> */}
           </Link>
         </div>
       </section>
@@ -144,6 +166,29 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            tags
+            description
+          }
+        }
+      }
+    }
+    all: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        fields: { slug: { nin: ["/learn-in-public-greek/"] } }
+        frontmatter: { category: { nin: ["ideas", "about"] } }
+      }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            tags
             description
           }
         }

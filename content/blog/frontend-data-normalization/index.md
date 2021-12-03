@@ -21,7 +21,7 @@ There are libraries that can help with this like [Normalizr](https://github.com/
 
 In our state below, notice that we have an array of object that each object has it's own array of objects as well.
 
-```jsx
+```javascript
 const posts = [
   {
     id: "1",
@@ -71,7 +71,7 @@ One thing we might do is first find the post we want and then chain another high
 
 > **Note:** This has something to do with **BigO** notation. Simply put, **BigO** notation tells you the number of operations an algorithm will make. We will cover this in a future article as well.
 
-```jsx
+```javascript
 const findComment = posts
   .find(post => post.id === "2")
   .comments.find(comment => comment.id === "12")
@@ -95,7 +95,7 @@ console.log(state)
 
 <div class="filename">output</div>
 
-```jsx
+```javascript
  {
 	posts: {
 		byId: {
@@ -129,13 +129,13 @@ console.log(state)
 
 Instead of looping an array we can access a specific post by id.
 
-```jsx
+```javascript
 console.log(state.posts.byId[2])
 ```
 
 <div class="filename">output</div>
 
-```java
+```javascript
  {
 	id: "2",
 	name: "name 2",
@@ -168,7 +168,7 @@ One way to approach this is normalizing the comments first and then the post its
 
 Now doing all the normalization within the reduce method is a bit verbose. We can abstract it to it's own reusable function named <span class="highlight-in-text">normalizeBy</span>.
 
-```jsx
+```javascript
 const normalizeBy = key => {
   return (data, item) => {
     data[item[key]] = item
@@ -187,7 +187,7 @@ If we log it to console the output will look something like be this.
 
 <div class="filename">output</div>
 
-```jsx
+```javascript
 "2" : {
 	id: "2",
 	name: "name 2",
@@ -204,7 +204,7 @@ If we log it to console the output will look something like be this.
 
 We can further abstract our state by separating our comments from within the post and keep an array of comments that belong to a post. We are going to keep the <span class="highlight-in-text">comments</span> arrays though in each post but only contain the id of each comment.
 
-```jsx
+```javascript
 const nomalizedComments = posts
   .map(post => post.comments)
   .flat()
@@ -240,7 +240,7 @@ console.log(state)
 
 <div class="filename">output</div>
 
-```jsx
+```javascript
  {
 	posts: {
 		byId: {
@@ -300,7 +300,7 @@ Now we can access
 - all the posts or comments
 - all the comments of a specific post
 
-```jsx
+```javascript
 // 1
 console.log(state.posts.byId[2])
 console.log(state.comments.byId[13])

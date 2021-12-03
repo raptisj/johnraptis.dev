@@ -131,12 +131,11 @@
   display: inline-block;
   margin: 0;
   padding: 40px 0 20px 0;
-  font-size: 3rem;
+  font-size: var(--heading-1);
   color: var(--title-color);
   position: relative;
 
   @include breakpoint(mobile) {
-    font-size: 2.6rem;
     padding: 0 0 20px 0;
   }
 

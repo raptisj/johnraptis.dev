@@ -14,39 +14,23 @@ h4 {
 }
 
 h2 {
-  font-size: $heading-2;
-
-  @include breakpoint(mobile) {
-    font-size: $mobile-heading-2;
-  }
+  font-size: var(--heading-2);
 }
 
 h3 {
-  font-size: $heading-3;
-
-  @include breakpoint(mobile) {
-    font-size: $mobile-heading-3;
-  }
+  font-size: var(--heading-3);
 }
 
 p,
 li {
   font-family: "Ubuntu", sans-serif;
-  font-size: $text-font-size;
+  font-size: var(--base-typography);
   color: var(--text-color);
-
-  @include breakpoint(mobile) {
-    font-size: 1rem;
-  }
 }
 
 code {
   font-family: "Maven Pro", sans-serif;
-  font-size: 1.1rem;
-
-  @include breakpoint(mobile) {
-    font-size: 1.1rem;
-  }
+  font-size: var(--base-typography);
 }
 
 ::selection {

@@ -89,9 +89,7 @@ An obvious but often overlooked way is to write tests which too can be done incr
 
 Ok, this might seem odd. But the true test that you don't have and don't generate legacy code today - at least as much - is if anyone in your team can go and make changes throughout the codebase. And the newcomers have a way of discovering how to work with it without the need to ask around for clarification. This doesn't mean you don't have places in the codebase where things aren't messy, but at least there is a way to navigate through. When your codebase doesn't depend on one single person, that is a healthy sign.
 
-You want to make yourself unnecessary and detach your ego from the code.
-
-Within teams that is also a sign of seniority. To be able to tackle the issue of dealing and working with legacy systems.
+You want to make yourself unnecessary and detach your ego from the code. Within teams that is also a sign of seniority. To be able to tackle the issue of dealing and working with legacy systems.
 
 ### Conclusion
 

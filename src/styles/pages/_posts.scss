@@ -32,8 +32,14 @@
 }
 
 .see-more-posts__link {
-  background: var(--see-more-link);
-  padding: 0 24px;
+  // background: var(--see-more-link);
+  padding: 16px 0;
+  display: inline-flex;
+  margin-top: 16px;
+
+  :not(pre) > code[class*="language-"] {
+    padding: 16px;
+  }
 }
 
 .post__link:hover,
@@ -45,7 +51,7 @@
 .see-more-posts__link:hover,
 .see-more-posts__link:active,
 .see-more-posts__link:focus {
-  background: var(--hover-links);
+  // background: var(--hover-links);
   // background: var(--see-more-link);
 }
 
@@ -55,7 +61,7 @@
   position: absolute;
   width: 12px;
   height: 100%;
-  background: var(--hover-links);
+  // background: var(--hover-links);
   // background: var(--see-more-link);
 }
 
@@ -154,12 +160,14 @@
 
 .tags-list {
   margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 
   span {
     background: var(--tags-bg);
     padding: 6px 8px;
     border-radius: 4px;
-    margin: 0 3px;
     cursor: pointer;
     font-weight: 600;
     font-size: 0.9rem;
