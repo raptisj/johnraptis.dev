@@ -90,6 +90,9 @@ const IndexPage = ({ data }) => {
             </div>
           )
         })}
+        <div>
+          <Link to="/blog">See more +</Link>
+        </div>
       </section>
 
       <section className="section home-projects">
