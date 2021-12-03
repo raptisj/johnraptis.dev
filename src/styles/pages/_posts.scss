@@ -19,12 +19,11 @@
   justify-content: center;
 }
 
-.post__link {
+.post__link, .see-more-posts__link {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 0 16px;
 
   @include breakpoint(mobile) {
     display: grid;
@@ -32,11 +31,32 @@
   }
 }
 
+.see-more-posts__link {
+  background: var(--see-more-link);
+  padding: 0 24px;
+}
 
 .post__link:hover,
 .post__link:active,
 .post__link:focus {
   background: var(--hover-links);
+}
+
+.see-more-posts__link:hover,
+.see-more-posts__link:active,
+.see-more-posts__link:focus {
+  background: var(--hover-links);
+  // background: var(--see-more-link);
+}
+
+.see-more-posts__link:hover::before,
+.see-more-posts__link:hover::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 100%;
+  background: var(--hover-links);
+  // background: var(--see-more-link);
 }
 
 .post__link:hover::before,
@@ -48,14 +68,15 @@
   background: var(--hover-links);
 }
 
+.see-more-posts__link:hover::before,
 .post__link:hover::before {
   left: -12px;
 }
 
+.see-more-posts__link:hover::after,
 .post__link:hover::after {
   right: -12px;
 }
-
 
 .post__head-wrapper {
   display: flex;
@@ -66,7 +87,6 @@
   color: #727272;
   white-space: nowrap;
   font-size: 0.9rem;
-  // padding: 1rem 0 0 10px;
 
   @include breakpoint(mobile) {
     display: none;
@@ -87,6 +107,13 @@
 
   @include breakpoint(mobile) {
     font-size: 1.1rem;
+  }
+}
+
+.see-more-posts__link {
+  .post__title {
+    // color: #9f9f9f;
+    color: var(--brand-color);
   }
 }
 
