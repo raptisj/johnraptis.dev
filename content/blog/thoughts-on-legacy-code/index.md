@@ -57,7 +57,7 @@ Learn how to write [good technical documentation](https://medium.com/@VincentOli
 
 ## Extendibility
 
-A piece of code might work but it is really dead if you can't extend it. Sure it can work as expected and still generate revenue for the company but one-day shit will hit the fan. You can minimize the problem by keeping things isolated so it doesn't affect the rest of the code though but this can't be a permanent solution.
+A piece of code might work but it is really dead if you can't extend it. Sure it can work as expected and still generate revenue for the company but one-day shit will hit the fan. You can minimize the problem by keeping things isolated so it doesn't affect the rest of the code though this can't be a permanent solution.
 
 You really don't want to end up in a situation wherein order to add a new feature, you have to make changes and preserve code that is based on old practices or technologies you no longer support just to fill a business need.
 
