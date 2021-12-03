@@ -59,7 +59,7 @@ const Bio = () => {
         >
           Join newsletter
         </a>
-        <span>Ain't no spam here when you sub.</span>
+        <span className="newsletter-button__subtitle" style={{ marginTop: '8px' }}>Ain't no spam here when you sub.</span>
       </div>
     </div>
   )

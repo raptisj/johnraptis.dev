@@ -25,12 +25,12 @@ const Blog = ({ data }) => {
       </div>
 
       <section className="posts__grid">
-        {posts.filter(({node}) => node.frontmatter.tags.includes(currentTag) || currentTag === 'all').map(({ node }) => {
+        {posts.filter(({ node }) => node.frontmatter.tags.includes(currentTag) || currentTag === 'all').map(({ node }) => {
           return (
             <div key={node.fields.slug}>
               <Link to={node.fields.slug} className="post__link">
                 <h3 className="post__title">{node.frontmatter.title}</h3>
-                  <span>{node.frontmatter.date}</span>
+                <span>{node.frontmatter.date}</span>
               </Link>
             </div>
           )
@@ -74,12 +74,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-
-          {/* <div className="post__info"> */}
-                  {/* <div className="post__tags">
-                    {node.frontmatter.tags?.length > 0 && node.frontmatter.tags.map((p, i) => (
-                      <span data-value={p} key={i}>{p}</span>
-                    ))}
-                  </div> */}
-                {/* </div> */}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Helmet from "react-helmet"
@@ -6,8 +6,9 @@ import Projects from "../components/Projects"
 import projects from "../../data/projects"
 import { Link, graphql } from "gatsby"
 import meme from "../../content/assets/me.jpeg"
-import github from "../../content/assets/github-icon.svg"
-import twitter from "../../content/assets/twitter-icon.svg"
+import Twitter from "../icons/Twitter"
+import GitHub from "../icons/GitHub"
+import { getDifferenceInDays } from '../utils'
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
@@ -37,7 +38,6 @@ const IndexPage = ({ data }) => {
               >
                 Join newsletter
               </a>
-              <span>Ain't no spam here when you sub.</span>
             </div>
             <div className="social-icons">
               <a
@@ -45,26 +45,26 @@ const IndexPage = ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="twitter"
+                data-title="twitter"
               >
-                <img
-                  src={twitter}
-                  className="nav__social-icons"
-                  alt="twitter"
-                />
+                <Twitter />
               </a>
               <a
                 href="https://github.com/raptisj"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="github"
+                data-title="github"
               >
-                <img src={github} className="nav__social-icons" alt="github" />
+                <GitHub />
               </a>
             </div>
+            <span className="newsletter-button__subtitle">Ain't no spam here when you sub.</span>
           </div>
         </div>
         <div className="home__image">
           <img src={meme} alt="John Raptis" />
+          <div />
         </div>
       </section>
 
@@ -76,11 +76,16 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         {posts.map(({ node }) => {
+          const isNewPost = getDifferenceInDays(new Date(node.frontmatter.date)) < 7
+
           return (
             <div key={node.fields.slug}>
               <Link to={node.fields.slug} className="post__link">
-                <h3 className="post__title">{node.frontmatter.title}</h3>
-                <span>{node.frontmatter.date}</span>
+                <div className="post__head-wrapper">
+                  {isNewPost && <span className="post__is-new-tag">NEW</span>}
+                  <h3 className="post__title">{node.frontmatter.title}</h3>
+                </div>
+                <span className="post__date">{node.frontmatter.date}</span>
               </Link>
             </div>
           )

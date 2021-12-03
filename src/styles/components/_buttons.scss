@@ -38,6 +38,7 @@
 .newsletter-button {
   font-size: 20px;
   font-weight: 600;
+  display: inline-flex;
   padding: 0.4rem 1rem;
   border-radius: 4px;
   background: var(--brand-color);
@@ -49,9 +50,8 @@
   }
 }
 
-.newsletter-button + span {
+.newsletter-button__subtitle {
   display: block;
-  margin-top: 16px;
   font-size: 13px;
   color: #727272;
   font-style: italic;

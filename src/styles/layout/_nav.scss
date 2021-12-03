@@ -31,7 +31,7 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto 1fr;
   padding: 0 10px;
 
   @include breakpoint(mobile) {
@@ -39,33 +39,46 @@
   }
 }
 
-.nav__brand {
+.nav__logo {
   align-self: center;
+}
+
+.nav__logo a {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--nav-links);
+  padding: 7px 14px;
+}
+
+.nav__logo a:hover{
+  color: var(--brand-color);
 }
 
 .nav__links {
   align-self: center;
-  justify-self: center;
+  justify-self: end;
+  display: flex;
+  align-items: center;
 }
 
-.nav__brand a,
-.nav__links a,
-.nav__social a {
+.nav__links a {
   color: var(--nav-links);
   font-size: 1.1rem;
   padding: 7px 14px;
   font-weight: 600;
-
+  border-bottom: 2px solid var(--hover-nav-links-border);
+  
   @include breakpoint(mobile) {
     padding: 7px;
   }
 }
 
-.nav__brand a {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.3rem;
+.nav__links a:hover,
+.nav__links a:focus,
+.nav__links a[aria-current='page'] {
+  border-bottom: 2px solid var(--hover-nav-links-border-hover);
 }
 
 .nav__favicon {
@@ -80,15 +93,12 @@
   }
 }
 
-.nav__brand a:hover,
-.nav__links a:hover {
-  color: var(--brand-color);
-}
 
 .nav__theme-icon {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin: 0 0 0 16px;
 
   img {
     width: 30px;
@@ -96,20 +106,3 @@
   }
 }
 
-.nav__social {
-  align-self: center;
-  justify-self: end;
-  display: flex;
-  // grid-template-columns: repeat(3, auto);
-  align-items: center;
-}
-
-.nav__social-icons {
-  width: 20px;
-  margin: 0;
-  vertical-align: middle;
-}
-
-.nav__social a:hover {
-  background: var(--hover-nav-links-opacity);
-}

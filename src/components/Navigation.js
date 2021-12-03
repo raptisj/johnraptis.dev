@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from "react"
 import { Link } from "gatsby"
 import favicon from "../../content/assets/favicon.png"
 
-const Navigation = ({changeTheme, icon}) => {
+const Navigation = ({ changeTheme, icon }) => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Navigation = ({changeTheme, icon}) => {
       setScrolled(false)
     }
 
-    const logoIcon = document.querySelector(".nav__brand a img")
+    const logoIcon = document.querySelector(".nav__logo a img")
 
     logoIcon.style.transform = `rotate(-${window.scrollY / 10}deg)`
   }
@@ -32,15 +32,15 @@ const Navigation = ({changeTheme, icon}) => {
 
       <nav className={scrolled ? "nav scrolled" : "nav"}>
         <div className="nav__container">
-          <div className="nav__brand">
+          <div className="nav__logo">
             <Link to="/">
               <img src={favicon} className="nav__favicon" alt="favicon" />
               <span className="nav__site-title">John Raptis</span>
             </Link>
           </div>
 
-          <div className="nav__social">
-          <Link to="/about">About</Link>
+          <div className="nav__links">
+            <Link to="/about">About</Link>
             <Link to="/blog">Articles</Link>
             <a href="https://garden.johnraptis.dev/" target="_blank">Garden</a>
 
