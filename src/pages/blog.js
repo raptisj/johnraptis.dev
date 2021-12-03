@@ -11,6 +11,36 @@ const Blog = ({ data }) => {
   const { title, description } = data.site.siteMetadata
   const allTags = [...new Set(posts.map(p => p.node.frontmatter.tags.flat()).flat())];
 
+  //TODO: find a more optimal way of handling this 
+  const yearHeading = ['2021', '2020', '2019']
+
+  const year2021 = []
+  const year2020 = []
+  const year2019 = []
+
+  const po = posts.map(p => {
+    const filterByTag = p.node.frontmatter.tags.includes(currentTag) || currentTag === 'all'
+    const year = p.node.frontmatter.date.split(' ')[2]
+
+    if (year === yearHeading[0] && filterByTag) {
+      year2021.push(p)
+    }
+
+
+    if (year === yearHeading[1] && filterByTag) {
+      year2020.push(p)
+    }
+
+
+    if (year === yearHeading[2] && filterByTag) {
+      year2019.push(p)
+    }
+
+    return p;
+  })
+
+  const yearList = [year2021, year2020, year2019]
+
   return (
     <Layout>
       <Helmet title={`Articles - John Raptis`} />
@@ -25,16 +55,21 @@ const Blog = ({ data }) => {
       </div>
 
       <section className="posts__grid">
-        {posts.filter(({ node }) => node.frontmatter.tags.includes(currentTag) || currentTag === 'all').map(({ node }) => {
-          return (
-            <div key={node.fields.slug}>
-              <Link to={node.fields.slug} className="post__link">
-                <h3 className="post__title">{node.frontmatter.title}</h3>
-                <span>{node.frontmatter.date}</span>
-              </Link>
-            </div>
-          )
-        })}
+        {yearHeading.map((p, i) => (
+          <>
+            {yearList[i].length ? <h2>{p}</h2> : null}
+            {yearList[i].filter(({ node }) => node.frontmatter.tags.includes(currentTag) || currentTag === 'all').map(({ node }) => {
+              return (
+                <div key={node.fields.slug}>
+                  <Link to={node.fields.slug} className="post__link">
+                    <h3 className="post__title">{node.frontmatter.title}</h3>
+                    <span>{node.frontmatter.date}</span>
+                  </Link>
+                </div>
+              )
+            })}
+          </>
+        ))}
       </section>
     </Layout>
   )

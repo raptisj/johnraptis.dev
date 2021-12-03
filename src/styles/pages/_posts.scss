@@ -1,9 +1,28 @@
 .posts__grid {
   padding-top: 100px;
+
+  h2 {
+    position: relative;
+    color: var(--brand-color);
+    margin: 40px 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      width: 100%;
+      height: 13px;
+      left: 0;
+      z-index: -1;
+      background: var(--brand-color-opacity);
+    }
+  }
+  
   @include breakpoint(mobile) {
     padding-top: 60px;
   }
 }
+
 
 .post__is-new-tag {
   font-size: 12px;

@@ -3,7 +3,7 @@ title: Thoughts on Legacy Code and How to Live With it
 date: 2021-12-02
 description: You will never get rid of legacy code, you can only learn how to deal and live with it.
 template: post
-tags: ["tooling"]
+tags: ["thoughts", "ideas"]
 ---
 
 Let's start with one statement before we even define what legacy code is.
