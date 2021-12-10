@@ -10,7 +10,7 @@ import Twitter from "../icons/Twitter"
 // import GitHub from "../../content/assets/github-icon.svg"
 import { getDifferenceInDays } from '../utils'
 
-const IndexPage = ({ data }) => {
+const Home = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   const { title, description } = data.site.siteMetadata
   const [isHovered, setIsHovered] = useState(false)
@@ -30,8 +30,8 @@ const IndexPage = ({ data }) => {
   }, [isHovered])
 
   const msg = !isHovered
-    ? ` <code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">seeMoreOn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation"> . . . }</span></code>`
-    : `<code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">seeMoreOn</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token function-variable function">${allTags.join(', ')} . . . </span><span class="token punctuation">}</span></code>`
+    ? ` <code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">seeAllPosts</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation"> . . . }</span></code>`
+    : `<code class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">seeAllPosts</span> <span class="token operator">=</span> <span class="token function-variable function">about</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token function-variable function">${allTags.join(', ')} . . . </span><span class="token punctuation">}</span></code>`
 
   return (
     <Layout>
@@ -139,7 +139,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
+export default Home
 
 export const pageQuery = graphql`
   query {

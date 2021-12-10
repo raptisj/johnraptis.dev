@@ -3,7 +3,7 @@ title: Thoughts on Legacy Code and How to Live With it
 date: 2021-12-02
 description: You will never get rid of legacy code, you can only learn how to deal and live with it.
 template: post
-tags: ["thoughts", "ideas"]
+tags: ["thoughts"]
 ---
 
 Let's start with one statement before we even define what legacy code is.
@@ -26,6 +26,17 @@ Many companies never took off because they were too focused on the code to be pe
 It's ok to hack something fast to push the business forward but you need a way to get out of the ditch you are slowly digging for yourself. It is called technical debt for a reason. It means you are going to pay for in the future with your time, or someone else's time.
 
 So having a pragmatic and effective approach is vital.
+
+### Contents
+
+- [Refactor vs Rewrite](#refactor-vs-rewrite)
+- [Documentation](#documentation)
+- [Extendibility](#extendibility)
+- [Practical Implementation](#practical-implementation)
+- [Testing](#testing)
+- [Faceless Changes](#faceless-changes)
+
+---
 
 ## Refactor vs Rewrite
 

@@ -57,7 +57,7 @@ const Blog = ({ data }) => {
       <section className="posts__grid">
         {yearHeading.map((p, i) => (
           <>
-            {yearList[i].length ? <h2>{p}</h2> : null}
+            {yearList[i].length ? <h2 className="year-heading">{p}</h2> : null}
             {yearList[i].filter(({ node }) => node.frontmatter.tags.includes(currentTag) || currentTag === 'all').map(({ node }) => {
               return (
                 <div key={node.fields.slug}>

@@ -33,6 +33,10 @@ code {
   font-size: var(--base-typography);
 }
 
+hr {
+  background: var(--hr-border);
+}
+
 ::selection {
   color: #f8f8f8;
   background: var(--brand-color);

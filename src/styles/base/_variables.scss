@@ -97,11 +97,12 @@ $error: #f2777a;
   --image-background: #cfcfcf;
   --image-background-secondary: #dddddd40;
   --see-more-link: #fbf9f9;
+  --hr-border: hsla(0,0%,0%,0.2);
 }
 
 .dark {
   background: #2d2d2d;
-
+  
   --bg-container: #2d2d2d;
   --brand-color: #4ad0d0;
   --hover-brand-color: #389696;
@@ -125,4 +126,5 @@ $error: #f2777a;
   --image-background: #414141;;
   --image-background-secondary: #41414140;
   --see-more-link: #2a2828;
+  --hr-border: #8b8b8b;
 }
