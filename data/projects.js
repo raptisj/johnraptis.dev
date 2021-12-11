@@ -1,4 +1,4 @@
-export default [
+export const projectLit = [
   // {
   //   title: "SpreadVote",
   //   link: "https://github.com/raptisj/spread-vote-frontend",
@@ -18,3 +18,18 @@ export default [
     state: "🏡",
   },
 ]
+
+export const projectInfo = {
+  workInProgress: {
+    text: 'Work in progress',
+    icon: '🛠️',
+  },
+  kindaActive: {
+    text: 'Kinda complete',
+    icon: '💡',
+  },
+  homepage: {
+    text: 'This website',
+    icon: '🏡'
+  }
+}

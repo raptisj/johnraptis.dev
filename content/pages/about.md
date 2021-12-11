@@ -32,10 +32,11 @@ If you want to contact me and give me feedback or comment on something or correc
 
 - **Favorite song:** <a class="favorite-links" href="https://www.youtube.com/watch?v=iAvVQgvjeZ8" target="_blank">Alfa Mist - Galaxy</a>
 - **Currently reading:** <br />
-  How to Fail at Almost Everything an Still Win Big _by Scott Adams_, <br />
-  How Innovation Works _by Matt Ridley_
+  The Beginning of Infinity _by David Deutsch_ <br />
+  God's Debris _by Scott Adams_, <br />
+  The Scout Mindset _by Julia Galef_
 
-- **Recently Watched:** <a class="favorite-links" href="https://www.youtube.com/watch?v=UaZeTmFBbGc" target="_blank">Possibly The Most Dangerous Animal In The World
+- **Recently Watched:** <a class="favorite-links" href="https://www.youtube.com/watch?v=Txyhd_qV25g&ab_channel=Naval" target="_blank">Rational Optimism Is the Way Out
   </a>
 - **Made me think:** <a class="favorite-links" href="https://nesslabs.com/flexible-consistency" target="_blank">The power of flexible consistency
   </a>

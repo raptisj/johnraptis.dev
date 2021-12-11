@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Helmet from "react-helmet"
 import Projects from "../components/Projects"
-import projects from "../../data/projects"
+import { projectLit as projects } from "../../data/projects"
 import { Link, graphql } from "gatsby"
 import meme from "../../content/assets/me.jpeg"
 import Twitter from "../icons/Twitter"
@@ -14,6 +14,7 @@ const Home = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   const { title, description } = data.site.siteMetadata
   const [isHovered, setIsHovered] = useState(false)
+
   // TODO: Count each tag and sort accordingly
   const allTags = [...new Set(data.all.edges.map(p => p.node.frontmatter.tags.flat()).flat())];
 

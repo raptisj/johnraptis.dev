@@ -11,35 +11,31 @@ const Blog = ({ data }) => {
   const { title, description } = data.site.siteMetadata
   const allTags = [...new Set(posts.map(p => p.node.frontmatter.tags.flat()).flat())];
 
-  //TODO: find a more optimal way of handling this 
   const yearHeading = ['2021', '2020', '2019']
 
   const year2021 = []
   const year2020 = []
   const year2019 = []
 
-  const po = posts.map(p => {
-    const filterByTag = p.node.frontmatter.tags.includes(currentTag) || currentTag === 'all'
-    const year = p.node.frontmatter.date.split(' ')[2]
+  const listByYear = posts.reduce((acc, cur) => {
+    const filterByTag = cur.node.frontmatter.tags.includes(currentTag) || currentTag === 'all'
+    const yearxx = cur.node.frontmatter.date.split(' ')[2]
 
-    if (year === yearHeading[0] && filterByTag) {
-      year2021.push(p)
+    if (yearxx === yearHeading[0] && filterByTag) {
+      year2021.push(cur)
     }
 
-
-    if (year === yearHeading[1] && filterByTag) {
-      year2020.push(p)
+    if (yearxx === yearHeading[1] && filterByTag) {
+      year2020.push(cur)
     }
 
-
-    if (year === yearHeading[2] && filterByTag) {
-      year2019.push(p)
+    if (yearxx === yearHeading[2] && filterByTag) {
+      year2019.push(cur)
     }
 
-    return p;
-  })
-
-  const yearList = [year2021, year2020, year2019]
+    acc = [year2021, year2020, year2019]
+    return acc;
+  }, [])
 
   return (
     <Layout>
@@ -56,9 +52,9 @@ const Blog = ({ data }) => {
 
       <section className="posts__grid">
         {yearHeading.map((p, i) => (
-          <>
-            {yearList[i].length ? <h2 className="year-heading">{p}</h2> : null}
-            {yearList[i].filter(({ node }) => node.frontmatter.tags.includes(currentTag) || currentTag === 'all').map(({ node }) => {
+          <div key={p}>
+            {listByYear[i].length ? <h2 className="year-heading">{p}</h2> : null}
+            {listByYear[i].filter(({ node }) => node.frontmatter.tags.includes(currentTag) || currentTag === 'all').map(({ node }) => {
               return (
                 <div key={node.fields.slug}>
                   <Link to={node.fields.slug} className="post__link">
@@ -68,7 +64,7 @@ const Blog = ({ data }) => {
                 </div>
               )
             })}
-          </>
+          </div>
         ))}
       </section>
     </Layout>
