@@ -120,7 +120,7 @@ const Home = ({ data }) => {
         </div>
       </section>
 
-      <section className="section home-projects">
+      {/* <section className="section home-projects">
         <h2>Projects</h2>
         <p>Some projects I'm working on.</p>
         <Projects projects={projects} />
@@ -135,7 +135,7 @@ const Home = ({ data }) => {
             🏡 <span>This website</span>
           </p>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }

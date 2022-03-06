@@ -43,7 +43,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
@@ -93,7 +92,56 @@ module.exports = {
         head: true,
       },
     },
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+             {
+              allMarkdownRemark(
+                sort: { fields: [frontmatter___date], order: DESC }
+                filter: {
+                  fields: { slug: { nin: ["/learn-in-public-greek/"] } }
+                  frontmatter: { category: { nin: ["ideas", "about"] } }
+                }
+                limit: 5
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      date(formatString: "MMMM DD, YYYY")
+                      title
+                      tags
+                      description
+                    }
+                  }
+                }
+              }
+             }
+            `,
+            output: '/rss.xml',
+            title: 'John Raptis'
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
